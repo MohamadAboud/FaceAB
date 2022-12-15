@@ -1,61 +1,137 @@
 import flet as ft
 from flet import *
 
-def CustomLoadingButton(text,padding=None,maxheight=40,minheight=50,maxwidth=200,minwidth = 50,on_click=None):
 
-    def startAnimation(e):
-        global check
-        btn.width = minwidth if btn.width == maxwidth else maxwidth
-        btn.height = minheight if btn.height == maxheight else maxheight
-        btn.border_radius = border_radius.all(12) if btn.border_radius == border_radius.all(50) else border_radius.all(50)
+HIEGHT = 650
+WIDTH = 350
 
-        if on_click:
-            on_click()
+primaryColor = "#80faff" # FF725E
+secondColor  = "#1f4153"
+backgroundColor = "#141c26"
 
-        btn.update()
-
-
-
-    btn = Container(
-        padding = padding if padding else ft.padding.symmetric(horizontal=8),
-        alignment=alignment.center,
-        width=maxwidth,
-        height=maxheight,
-        border_radius=border_radius.all(12),
-        bgcolor = "red",
-        animate = animation.Animation(1000, AnimationCurve.EASE_OUT),
-        on_click = startAnimation,
-
-        content= Text(text)
+def Padding(height,width=None):
+    return Container(
+        height= height,
+        width = width
     )
 
-    return btn
+class LoadingScreen(UserControl):
 
-
-def CustomAlart():
-    w,h = 150,200
-
-    dlg = ft.AlertDialog(
-        title = Container(
-            height = h,
-            width = w,
-            padding = ft.padding.all(10),
-            bgcolor = "green",
-        ),
-        content=Container(
-            height = h,
-            width = w,
-            padding = ft.padding.all(10),
-            bgcolor = "red",
-        ),
-
+    def build(self):
+        self.__page = AnimatedSwitcher(
+        self._loading(),
+        transition=ft.AnimatedSwitcherTransition.SCALE,
+        duration=500,
+        reverse_duration=100,
+        switch_in_curve=ft.AnimationCurve.BOUNCE_OUT,
+        switch_out_curve=ft.AnimationCurve.BOUNCE_IN,
     )
 
-    return dlg
+        return self.__page
+
+    def _done(self):
+
+        return Column(
+            alignment=MainAxisAlignment.CENTER,
+            horizontal_alignment=CrossAxisAlignment.CENTER,
+            height=HIEGHT,
+            width= WIDTH,
+            controls=[
+                Container(
+                    bgcolor= primaryColor ,
+                    padding=padding.all(16),
+                    shape= BoxShape.CIRCLE,
+                    content= Icon(
+                        icons.DONE,
+                        color=secondColor,
+                        scale= 1.8
+                    )
+                ),
+
+                Padding(height=35),
+
+                # Text ............
+                Text("Successful!".upper(), weight=FontWeight.BOLD, size=16),
+
+                # Text ............
+                Text(
+                    "Smile & blink your eyes,then move your\nhead slowly to complete",
+                    text_align=TextAlign.CENTER,
+                    opacity=0.5,  # ( 0 - 1 )
+                ),
+
+            ]
+        )
+
+    def _loading(self):
+
+        self.progressBar = ProgressBar(
+                    #value= 0.5 , # ( 0 - 1 )
+                    width = WIDTH * .8,
+                    bgcolor =  secondColor,
+                    color= primaryColor,
+                )
+
+        return Column(
+            horizontal_alignment = CrossAxisAlignment.CENTER,
+            height=HIEGHT,
+            width=WIDTH,
+            controls=[
+                Image(
+                    src = "https://picsum.photos/id/250/200/300",
+                    height= HIEGHT * .6,
+                    width= WIDTH,
+                    fit=ImageFit.COVER
+                ),
+
+                Padding(height=20),
+
+                # Text............
+                Text("Loading...".upper(),weight=FontWeight.BOLD,size=16),
+
+                Padding(height=5),
+
+                # ProgressBar .........
+                self.progressBar,
+
+                Padding(height=5),
+
+                # Text............
+                Text(
+                    "Smile & blink your eyes,then move your\nhead slowly to complete",
+                    text_align=TextAlign.CENTER,
+                    opacity= 0.5, # ( 0 - 1 )
+                ),
+
+                TextButton(
+                    "Start",
+                    on_click=self.on_click,
+                    height= 34 ,
+                    style= ButtonStyle(
+                        bgcolor= primaryColor,
+                        color= secondColor
+                    )
+                )
+
+            ]
+        )
+    def on_click(self,e):
+        value = self.progressBar.value
+
+        if value == None : value = 0
+
+        for i in range(0,101):
+            self.progressBar.value = i/100
+
+            self.progressBar.update()
+            time.sleep(0.01)
+
+        self.__page.content = self._done()
+        self.__page.update()
 
 
 
-def Home(page: Page):
+def main(page:Page):
     page.title = "Test"
     page.bgcolor = "#141c26"
     page.theme_mode = ThemeMode.DARK
@@ -66,28 +142,16 @@ def Home(page: Page):
     page.padding = 0
     page.margin = 0
     # page.scroll = True
-    page.vertical_alignment = MainAxisAlignment.CENTER
-    page.horizontal_alignment = CrossAxisAlignment.CENTER
+    # page.vertical_alignment = MainAxisAlignment.CENTER
 
-    def open_dlg(e):
-        dlg = CustomAlart()
-        page.dialog = dlg
-        dlg.open = True
-        page.update()
+    # create application instance
+    loadingScreen = LoadingScreen()
 
-    btn = ElevatedButton(
-        text="Open Diloag",
-        on_click = open_dlg
-    )
-
-    page.add(
-        btn
-    )
-
-
+    # add application's root control to the page
+    page.add(loadingScreen)
 
 
 
 app(
-    target=Home,
+    target=main
 )

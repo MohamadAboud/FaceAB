@@ -19,6 +19,9 @@ def doneClicked(e):
         oldpath= f"{saveImagePath}/user-{Data.UID}",
         newpath= f"{saveImagePath}/{name}",
     )
+    print("1")
+
+
 
 def deleteClicked(e):
     DeleteFolder(f"{saveImagePath}/user-{Data.UID}")
@@ -118,10 +121,9 @@ buttons = Container(
     ],alignment= MainAxisAlignment.SPACE_AROUND,width=WIDTH *0.75)
 )
 
-def DoneScreen():
+def DoneScreen(additional_on_click):
 
-
-    return Container(
+    page = Container(
         height=HEIGHT,
         width=WIDTH,
         bgcolor=backgroundColor,
@@ -133,6 +135,13 @@ def DoneScreen():
             txt2,
             nameField,
             buttons
-        ])
-    )
+        ]))
+
+    def test(e):
+        doneClicked(e)
+        additional_on_click(e)
+
+    buttons.content.controls[2].on_click = test
+
+    return page
 

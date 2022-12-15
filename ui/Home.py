@@ -27,7 +27,8 @@ def Home(page: ft.Page):
     # Screens....................................
     splash = SplashScreen()
     imageScreen = ImageScreen()
-    doneScreen = DoneScreen()
+    doneScreen = DoneScreen(additional_on_click= lambda e:print("2"))
+    loadingScreen = LoadingScreen()
 
 
     def openImageScreen():
@@ -76,6 +77,7 @@ def Home(page: ft.Page):
     def next(e):
         page.controls = [doneScreen]
         page.update()
+
 
     nextButton = imageScreen.content.controls[5].content
 
