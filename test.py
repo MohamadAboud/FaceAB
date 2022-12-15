@@ -9,23 +9,18 @@ primaryColor = "#80faff" # FF725E
 secondColor  = "#1f4153"
 backgroundColor = "#141c26"
 
-def Padding(height,width=None):
-    return Container(
-        height= height,
-        width = width
-    )
 
 class LoadingScreen(UserControl):
 
     def build(self):
         self.__page = AnimatedSwitcher(
-        self._loading(),
-        transition=ft.AnimatedSwitcherTransition.SCALE,
-        duration=500,
-        reverse_duration=100,
-        switch_in_curve=ft.AnimationCurve.BOUNCE_OUT,
-        switch_out_curve=ft.AnimationCurve.BOUNCE_IN,
-    )
+            self._loading(),
+            transition=AnimatedSwitcherTransition.SCALE,
+            duration=500,
+            reverse_duration=100,
+            switch_in_curve=AnimationCurve.BOUNCE_OUT,
+            switch_out_curve=AnimationCurve.BOUNCE_IN,
+        )
 
         return self.__page
 
@@ -48,7 +43,7 @@ class LoadingScreen(UserControl):
                     )
                 ),
 
-                Padding(height=35),
+                Container(height=35), # Padding
 
                 # Text ............
                 Text("Successful!".upper(), weight=FontWeight.BOLD, size=16),
@@ -84,17 +79,17 @@ class LoadingScreen(UserControl):
                     fit=ImageFit.COVER
                 ),
 
-                Padding(height=20),
+                Container(height=20), # Padding
 
                 # Text............
                 Text("Loading...".upper(),weight=FontWeight.BOLD,size=16),
 
-                Padding(height=5),
+                Container(height=5), # Padding
 
                 # ProgressBar .........
                 self.progressBar,
 
-                Padding(height=5),
+                Container(height=5), # Padding
 
                 # Text............
                 Text(
