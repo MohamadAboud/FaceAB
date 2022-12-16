@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add AnimatedSwitcher">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change padding to container">
+      <change afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/widgets/dev.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splashscreen-robot.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/splash_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/splash_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/buttons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/widgets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +56,49 @@
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.dev">
+    <configuration name="dev" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="3.CardID (GUI)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ui/widgets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui/widgets/dev.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="3.CardID (GUI)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/home.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="3.CardID (GUI)" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,27 +133,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/pose_detector.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pose_detector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\core\pose_detector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,10 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dev" />
+        <item itemvalue="Python.home" />
         <item itemvalue="Python.utils" />
         <item itemvalue="Python.take_images" />
         <item itemvalue="Python.pose_detector (1)" />
-        <item itemvalue="Python.pose_detector" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671121837774</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change padding to container">
+      <created>1671122066295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671122066295</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +240,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Intial commit" />
     <MESSAGE value="Add AnimatedSwitcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add AnimatedSwitcher" />
+    <MESSAGE value="change padding to container" />
+    <option name="LAST_COMMIT_MESSAGE" value="change padding to container" />
   </component>
 </project>
