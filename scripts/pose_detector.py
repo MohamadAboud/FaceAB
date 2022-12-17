@@ -1,7 +1,7 @@
 from cvzone.PoseModule import PoseDetector
 import cv2
 
-from scripts.dev import kDeveloperMode
+from utils.dev import Developer
 
 
 class BodyDetector():
@@ -18,7 +18,7 @@ class BodyDetector():
 
     def __pose(self):
         # pose --------------------------------------------------------------
-        self.frame = self.detector.findPose(self.frame, draw=kDeveloperMode)
+        self.frame = self.detector.findPose(self.frame, draw=Developer.isTesting)
         lmList, bboxInfo = self.detector.findPosition(self.frame, bboxWithHands=False,draw = False)
         if bboxInfo:
             landmarks = lmList[11][1:]

@@ -4,13 +4,13 @@ from ui.widgets.widgets import *
 from utils.check_file import Check
 
 
-class SplashScreen(UserControl):
+class WelcomScreen(UserControl):
 
     instance = None
     @classmethod
     def init(cls):
-        SplashScreen.instance = cls()
-        return SplashScreen.instance
+        WelcomScreen.instance = cls()
+        return WelcomScreen.instance
 
     def __init__(self):
         super().__init__()
@@ -18,7 +18,7 @@ class SplashScreen(UserControl):
         # Buttons --------------------
         self.getStartedButton = CustomButton(
             text=AppString.splashscreen.button1,
-            width=WIDTH * 0.9,
+            width=AppSize.width * 0.9,
             height=40,
             padding=padding.only(top=15, bottom=25),
             on_click= self.go_to_image_taking_screen
@@ -36,8 +36,8 @@ class SplashScreen(UserControl):
                 text=AppString.splashscreen.button3,
                 width=320,
                 height=40,
-                dColor=secondColor,
-                dTextColor=primaryColor,
+                dColor=AppColor.secondaryColor,
+                dTextColor=AppColor.primaryColor,
                 padding=padding.only(top=5),
                 on_click=self.go_to_image_taking_screen
             )
@@ -51,9 +51,9 @@ class SplashScreen(UserControl):
 
     def build(self):
         return Container(
-            height=HEIGHT,
-            width=WIDTH,
-            bgcolor=backgroundColor,
+            height=AppSize.height,
+            width=AppSize.width,
+            bgcolor=AppColor.backgroundColor,
             content=Column(
                 horizontal_alignment =CrossAxisAlignment.START,
                 controls=[
@@ -77,7 +77,7 @@ class SplashScreen(UserControl):
                                 Text(
                                     f"   {AppString.splashscreen.welcomText}",
                                     size=16,
-                                    color=primaryColor,
+                                    color=AppColor.primaryColor,
                                     weight=FontWeight.BOLD,
                                 ),
 
@@ -85,7 +85,7 @@ class SplashScreen(UserControl):
                                 Column([
                                     Row([
                                         Text(f"{AppString.splashscreen.subText[0]}".upper(), size=25, weight=FontWeight.BOLD),
-                                        Text(f"{AppString.splashscreen.subText[1]}".upper(), size=25, color=primaryColor,
+                                        Text(f"{AppString.splashscreen.subText[1]}".upper(), size=25, color=AppColor.primaryColor,
                                              weight=FontWeight.BOLD),
 
                                     ]),
@@ -96,7 +96,7 @@ class SplashScreen(UserControl):
                                 Column([
                                     Row([
                                         Text(f"{AppString.name[:3]}", opacity=0.4),
-                                        Text(f"{AppString.name[3:]}", color=primaryColor),
+                                        Text(f"{AppString.name[3:]}", color=AppColor.primaryColor),
                                         Text(f" {AppString.splashscreen.introText[0]}", opacity=0.4),
 
                                     ],spacing=0),
@@ -125,5 +125,11 @@ class SplashScreen(UserControl):
 
     def go_to_image_taking_screen(self,e):
         from ui.navigator import Navigator
+        from scripts.scripts import StartTakeImages
+
+        # push ImageScreen
         ImageScreen.init()
         Navigator.push(ImageScreen.instance)
+
+        # Run [TakeImages] scripts...
+        StartTakeImages()

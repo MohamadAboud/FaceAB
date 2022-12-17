@@ -1,2 +1,0 @@
-kDeveloperMode = True
-

@@ -8,7 +8,9 @@ def CrateFolder(path):
     if isExists(path) == False:
         os.mkdir(path)
 
-def ChangeNameFolder(oldpath, newpath):
+def ChangeNameFolder(path,oldname, newname):
+    oldpath = os.path.join(path,oldname)
+    newpath = os.path.join(path,newname)
     if isExists(oldpath) == True:
         os.rename(oldpath, newpath)
 

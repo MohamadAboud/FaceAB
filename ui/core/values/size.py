@@ -1,2 +1,5 @@
-WIDTH = 350
-HEIGHT = 650
+
+
+class AppSize:
+    height = 650
+    width  = 350

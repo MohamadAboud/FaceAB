@@ -1,17 +1,18 @@
 from ui.Home import Home
 from flet import *
 
+from utils.dev import Developer
+
+
 class Navigator:
 
     @classmethod
     def push(cls,page):
-
-
         Home.instance.stack.controls.append(
             page
         )
         cls.update()
-        print(f"Push")
+        Developer.log(f"Push",mode='info')
 
     @classmethod
     def pop(cls):
@@ -19,10 +20,24 @@ class Navigator:
         if isNotRoot:
             Home.instance.stack.controls.pop()
             cls.update()
-            print(f"Pop")
+            Developer.log("Pop", mode='info')
         else:
-            print("You can't pop")
+            Developer.log("You can't pop", mode='warning')
 
     @classmethod
     def update(cls):
         Home.instance.stack.update()
+
+    @classmethod
+    def pushReplacement(cls,page):
+        Home.instance.stack.controls.pop()
+        Home.instance.stack.controls.append(page)
+
+        cls.update()
+        Developer.log("pushReplacement", mode='info')
+
+    @classmethod
+    def popAllAndPush(cls,page):
+        Home.instance.stack.controls = [page]
+        cls.update()
+        Developer.log("Pop All And Push", mode='info')

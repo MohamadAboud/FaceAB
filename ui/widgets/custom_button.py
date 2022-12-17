@@ -1,10 +1,10 @@
 
 from flet import *
 
-from ui.core.core import primaryColor,secondColor
+from ui.core.core import AppColor
 
 
-def CustomButton(text: str, width=None, height=None , on_click=None , dColor = primaryColor ,hColor = colors.WHITE,dTextColor = secondColor,hTextColor = colors.BLACK,disabled=False,padding = None,expand = False):
+def CustomButton(text: str, width=None, height=None , on_click=None , dColor = AppColor.primaryColor ,hColor = colors.WHITE,dTextColor = AppColor.secondaryColor,hTextColor = colors.BLACK,disabled=False,padding = None,expand = False):
 
 
     button = Container(

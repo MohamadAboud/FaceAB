@@ -2,17 +2,21 @@ import time
 
 import cv2
 import mediapipe as mp
-from scripts.dev import kDeveloperMode
 from scripts.data import Data
-from utils.utils import *
+from ui.core.core import AppString
+from ui.routes.routes import ImageScreen
+from utils.dev import Developer
+from utils.utils import CrateFolder
 
+###############################
+############ Model ############
+###############################
 mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
 face_detection = mp_face_detection.FaceDetection(
     model_selection=0, min_detection_confidence=0.7)
 
-saveImagePath = "./data/users"  # + [ user folder -> user-00000 ]
 
 def cropImage(frame):
     height, width, _ = frame.shape
@@ -37,35 +41,34 @@ def cropImage(frame):
             return (frame,cropped_face)
 
 def save_image(image,count):
-    path = f"{saveImagePath}/user-{Data.UID}/{count}.jpg"
-    print(path)
+    path = f"{AppString.path.saveImg}/user-{Data.UID}/{count}.jpg"
+    Developer.log(path)
     cv2.imwrite(path,image)
 
 
 
-def TakeImages(updateProgressBar):
+def StartTakeImages():
 
 
     Data.UID = str(time.time())
-    CrateFolder(f"{saveImagePath}/user-{Data.UID}")
-
+    CrateFolder(f"{AppString.path.saveImg}/user-{Data.UID}")
 
     cap = cv2.VideoCapture(0)
+
+    # cap.set(3,WIDTH)
+    # cap.set(4,HEIGHT)
 
     count = 0
     while True:
         ret, frame = cap.read()
 
-
-
-
         try:
+            if count == 100: break
+
             frame, croppedFace = cropImage(frame)
 
-            if count == 100:
-                break
             count += 1
-            updateProgressBar()
+            ImageScreen.instance.increaseProgressBar()
 
             save_image(croppedFace, count)
         except:
@@ -73,10 +76,10 @@ def TakeImages(updateProgressBar):
 
 
         cv2.imshow("Take Image", frame)
-        cv2.imshow("Cropped face", croppedFace)
+        if Developer.isTesting : cv2.imshow("DeveloperMode[True]", croppedFace)
+
         key = cv2.waitKey(100)
-        if kDeveloperMode and key == 27:
-            break
+        if Developer.isTesting and key == 27:break
 
     cap.release
     cv2.destroyAllWindows()

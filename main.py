@@ -1,7 +1,6 @@
 from scripts.mind import MindThread
 from ui.Home import *
 from utils.check_file import Check
-
 from flet import app as runApp
 
 def initialize():
