@@ -4,30 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change screen to class and add Navigator 1.0">
-      <change afterPath="$PROJECT_DIR$/ui/routes/training_model_screen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/dev.py" afterDir="false" />
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change all screen to class and update Navigator 1.0">
+      <change afterPath="$PROJECT_DIR$/scripts/facial_recognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/model/faceDetection.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/dev.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/pose_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pose_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/take_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/take_images.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/values/colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/colors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/values/size.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/size.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/done_screen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/training_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/training_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/loading_screen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/splash_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/training_model_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/training_model_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +77,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="facial_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="3.CardID (GUI)" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/facial_recognition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="3.CardID (GUI)" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -131,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="take_images" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="predicting_gender_and_age" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="3.CardID (GUI)" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,7 +152,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/take_images.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,34 +182,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/utils.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.facial_recognition" />
+        <item itemvalue="Python.predicting_gender_and_age" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.dev" />
         <item itemvalue="Python.home" />
-        <item itemvalue="Python.utils" />
-        <item itemvalue="Python.take_images" />
       </list>
     </recent_temporary>
   </component>
@@ -241,8 +229,18 @@
       <option name="project" value="LOCAL" />
       <updated>1671183736319</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change all screen to class and update Navigator 1.0">
+      <created>1671274519143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671274519143</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -260,6 +258,7 @@
     <MESSAGE value="Add AnimatedSwitcher" />
     <MESSAGE value="change padding to container" />
     <MESSAGE value="change screen to class and add Navigator 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="change screen to class and add Navigator 1.0" />
+    <MESSAGE value="change all screen to class and update Navigator 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="change all screen to class and update Navigator 1.0" />
   </component>
 </project>

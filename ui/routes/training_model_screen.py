@@ -90,17 +90,23 @@ class TrainingScreen(UserControl):
             height=AppSize.height,
             width=AppSize.width,
             controls=[
-                Image(
+                Container(
+                    on_click=self.Test1,
+                    content=Image(
                     src=AppString.trainingscreen.img,
                     height=AppSize.height * .6,
                     width=AppSize.width,
                     fit=ImageFit.COVER,
+                )
                 ),
 
                 Container(height=20), # Padding
 
                 # Text............
-                Text(f"{AppString.trainingscreen.progressText1}".upper(),weight=FontWeight.BOLD,size=16),
+                Container(
+                    on_click=self.Test2,
+                    content=Text(f"{AppString.trainingscreen.progressText1}".upper(),weight=FontWeight.BOLD,size=16)
+                ),
 
                 Container(height=5), # Padding
 
@@ -150,6 +156,20 @@ class TrainingScreen(UserControl):
         self.__page.update()
 
         # await ...
+        from ui.navigator import Navigator
+        from ui.routes.welcom_screen import WelcomScreen
+        time.sleep(3)
+        Navigator.popAllAndPush(WelcomScreen.instance)
+
+
+    def Test1(self,e):
+        for i in range(1,101):
+            self.increaseProgressBar()
+            time.sleep(0.01)
+
+    def Test2(self,e):
+        val = self.selectedIndex + 1
+        self.updateDots(selected=val)
 
     def updateDots(self,selected):
         self.selectedIndex = selected
@@ -159,12 +179,12 @@ class TrainingScreen(UserControl):
             )
         self._dotsIndicator.update()
 
-    def increaseProgressBar(self):
+    def increaseProgressBar(self,value):
         val = self.progressBar.value
-        if val == None:
-            val = 0.01
-        else:
-            val += 0.01
+
+        if val == None: val = 0
+
+        val += value/100
 
         self.progressBar.value = val
 

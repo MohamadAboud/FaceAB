@@ -255,9 +255,10 @@ class ImageScreen(UserControl):
     def _go_to_the_training_screen(self, e):
         from ui.routes.routes import TrainingScreen
         from ui.navigator import Navigator
+        from scripts.scripts import TrainingModel
 
         # push TrainingScreen
         Navigator.popAllAndPush(TrainingScreen.init())
 
         # Run [Training Model] scripts...
-        # StartTakeImages()
+        TrainingModel.train()
