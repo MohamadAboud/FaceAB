@@ -1,15 +1,12 @@
-import threading
 import cv2
-
 from scripts.pose_detector import BodyDetector
 
 
-class MindThread(threading.Thread):
+class Mind:
 
     draw = True
 
     def __init__(self,title=str,src=0):
-        threading.Thread.__init__(self)
 
         self.title = title
         self.cap = cv2.VideoCapture(src)
@@ -17,8 +14,8 @@ class MindThread(threading.Thread):
         self.cap.set(4,720)
 
         #     for Card.........
-        self.__cardImg = cv2.imread("./assets/images/card3.jpg", cv2.IMREAD_UNCHANGED)
-        self.__cardBigImg = cv2.imread("./assets/images/card3.jpg", cv2.IMREAD_UNCHANGED)
+        self.__cardImg = cv2.imread("./assets/images/smallCard.jpg", cv2.IMREAD_UNCHANGED)
+        self.__cardBigImg = cv2.imread("./assets/images/bigCard.jpg", cv2.IMREAD_UNCHANGED)
         self.resizeCard(scale=0.2)
 
 
@@ -37,14 +34,20 @@ class MindThread(threading.Thread):
             if ret is None:
                 break
 
-            cardOffset = self.__getCardOffset(frame)
-            self.__cardInfo(frame, cardOffset)
+            try:
+                self.__cardBigFrame = self.__cardBigImg.copy()
 
-            self.__addInfoToCard(frame=frame, cardOffset=cardOffset)
+                cardOffset = self.__getCardOffset(frame)
+                self.__cardInfo(frame, cardOffset)
+                self.__addInfoToCard(frame=frame, cardOffset=cardOffset)
+            except:
+                self.__cardBigFrame = self.__cardBigImg.copy()
 
 
             cv2.imshow(self.title,frame)
-            cv2.imshow("card" , self.__cardBigImg)
+            cv2.imshow("My Card",self.__cardBigFrame)
+
+
             key = cv2.waitKey(1)
             if key & 0xFF == ord('q') or key & 0xFF == 27:
                 break
@@ -78,19 +81,21 @@ class MindThread(threading.Thread):
     def __addInfoToCard(self,frame,cardOffset):
         w,h = cardOffset[0]+self.__newWidthCard//2, cardOffset[1]+self.__newHeightCard//2
 
+        bigFrame = self.__cardBigFrame
         #########################################################################################################
-        nameOffset = (w - 17 , h )
+
         name = self.__getName(frame)
-        self.__putText(frame,name,offset=nameOffset,fontScale=0.14)
-        self.__putText(self.__cardBigImg,name,offset=(25,275),fontScale=0.7)
+        self.__putText(frame,name,offset=(w - 17 , h ),fontScale=0.14)
+        self.__putText(bigFrame,name,offset=(25,275),fontScale=0.7)
 
-        ageOffset = (w - 17 , h + 10)
-        age = self.__getAge(frame)
-        self.__putText(frame,age,offset=ageOffset,fontScale=0.13)
+        age,gender = self.__getAgeAndGender(frame)
 
-        genderOffset = (w -7 , h + 20)
-        gender = self.__getGender(frame)
-        self.__putText(frame,gender,offset=genderOffset)
+        self.__putText(frame,age,offset=(w - 17 , h + 10),fontScale=0.13)
+        self.__putText(bigFrame, age, offset=(25, 300), fontScale=0.6)
+
+        self.__putText(frame,gender,offset=(w -7 , h + 20))
+        self.__putText(bigFrame, gender, offset=(50, 330), fontScale=0.7)
+
 
 
         if len(name) > 13: raise ValueError("Length must be 13 characters or less")
@@ -110,16 +115,15 @@ class MindThread(threading.Thread):
 
     # ----------------------------------------------------------------
     def __getName(self,frame):
-        name = "Mohamad Aboud"
+        from scripts.facial_recognition import getName
+        name = getName(frame=frame)
+        print(f"name = {name}")
 
         return name
 
-    def __getAge(self, frame):
-        age = "(20 - 24) Years"
+    def __getAgeAndGender(self, frame):
+        from scripts.predicting_gender_and_age import PredictingGenderAndAge
+        pred = PredictingGenderAndAge(frame)
+        age, gender =  pred.start()
 
-        return age
-
-    def __getGender(self, frame):
-        gender = "{:>7}".format("Male")
-
-        return gender
+        return (age+" Years",gender)

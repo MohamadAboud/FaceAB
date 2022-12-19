@@ -119,34 +119,34 @@ class WelcomScreen(UserControl):
             )
         )
 
+    # def _EnableAndDisable(self):
+    #     # Disable Buttons
+    #     if Check.isFirstTime:
+    #         self.button.content.disabled = True
+    #         self.button.content.update()
+    #     else:
+    #         self.button.controls[0].content.disabled = True
+    #         self.button.controls[1].content.disabled = True
+    #         self.button.update()
+    #
+    #     # Enable Buttons
+    #     if Check.isFirstTime:
+    #         self.button.content.disabled = False
+    #         self.button.content.update()
+    #     else:
+    #         self.button.controls[0].content.disabled = False
+    #         self.button.controls[1].content.disabled = False
+    #         self.button.update()
 
     def runApp(self,e):
-        print("Run App Cliked")
+        from scripts.mind import Mind
+
+        mind = Mind(title="AI")
+        mind.run()
+
 
     def go_to_image_taking_screen(self,e):
-        # Disable Buttons
-        if Check.isFirstTime:
-            self.button.content.disabled = True
-            self.button.content.update()
-        else:
-            self.button.controls[0].content.disabled = True
-            self.button.controls[1].content.disabled = True
-            self.button.update()
-
-            print("Disable")
-
         from ui.navigator import Navigator
         # push ImageScreen
         Navigator.push(ImageScreen.init())
         ImageScreen.instance()
-
-
-
-        # Enable Buttons
-        if Check.isFirstTime:
-            self.button.content.disabled = False
-            self.button.content.update()
-        else:
-            self.button.controls[0].content.disabled = False
-            self.button.controls[1].content.disabled = False
-            self.button.update()

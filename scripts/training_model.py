@@ -106,6 +106,8 @@ class TrainingModel:
             knn_clf = pickle.load(model)
             cls.model = knn_clf
 
+        return cls.model
+
     @classmethod
     def _save(cls, model):
         # Save the trained KNN classifier ...

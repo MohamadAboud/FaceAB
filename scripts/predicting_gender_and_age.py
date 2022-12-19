@@ -13,7 +13,6 @@ class PredictingGenderAndAge:
     def __init__(self, frame):
         self.frame = frame
         self._loadModel()
-        self.start()
 
     def _loadModel(self):
         self.age_net = cv2.dnn.readNetFromCaffe(f'{modelsPath}/deploy_age.prototxt', f'{modelsPath}/age_net.caffemodel')
@@ -27,7 +26,6 @@ class PredictingGenderAndAge:
         faces = self.face_cascade.detectMultiScale(gray, 1.1, 5)
 
         for (x, y, h, w) in faces:
-            cv2.rectangle(self.frame, (x, y), (w + x, h + y), (255, 255, 0), 2)
 
             blob = cv2.dnn.blobFromImage(self.frame, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
 
@@ -43,5 +41,4 @@ class PredictingGenderAndAge:
             age = ageList[age_preds[0].argmax()]
             print(f"Age Range: {age}")
 
-            overlayText = "%s %s" % (gender, age)
-            cv2.putText(self.frame, overlayText, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+            return  (age,gender)

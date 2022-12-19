@@ -77,7 +77,7 @@ To install and use the FaceAB software, you will need to have the following libr
 <strong> Or you can download all libraries via the following command: </strong>
 
 ```
-> pip install requirements.txt -r
+> pip install -r requirements.txt
 ```
 
 
