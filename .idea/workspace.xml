@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change all screen to class and update Navigator 1.0">
-      <change afterPath="$PROJECT_DIR$/scripts/facial_recognition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" afterDir="false" />
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="add training_model script and predicting_gender_and_age script">
+      <change afterPath="$PROJECT_DIR$/utils/edit_frame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/model/faceDetection.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/take_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/take_images.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/training_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/training_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/training_model_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/training_model_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/check_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/check_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,9 +185,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.facial_recognition" />
         <item itemvalue="Python.predicting_gender_and_age" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.dev" />
         <item itemvalue="Python.home" />
       </list>
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671274519143</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add training_model script and predicting_gender_and_age script">
+      <created>1671369945976</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671369945976</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -259,6 +267,7 @@
     <MESSAGE value="change padding to container" />
     <MESSAGE value="change screen to class and add Navigator 1.0" />
     <MESSAGE value="change all screen to class and update Navigator 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="change all screen to class and update Navigator 1.0" />
+    <MESSAGE value="add training_model script and predicting_gender_and_age script" />
+    <option name="LAST_COMMIT_MESSAGE" value="add training_model script and predicting_gender_and_age script" />
   </component>
 </project>

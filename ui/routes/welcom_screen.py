@@ -124,12 +124,29 @@ class WelcomScreen(UserControl):
         print("Run App Cliked")
 
     def go_to_image_taking_screen(self,e):
+        # Disable Buttons
+        if Check.isFirstTime:
+            self.button.content.disabled = True
+            self.button.content.update()
+        else:
+            self.button.controls[0].content.disabled = True
+            self.button.controls[1].content.disabled = True
+            self.button.update()
+
+            print("Disable")
+
         from ui.navigator import Navigator
-        from scripts.scripts import StartTakeImages
-
         # push ImageScreen
-        ImageScreen.init()
-        Navigator.push(ImageScreen.instance)
+        Navigator.push(ImageScreen.init())
+        ImageScreen.instance()
 
-        # Run [TakeImages] scripts...
-        StartTakeImages()
+
+
+        # Enable Buttons
+        if Check.isFirstTime:
+            self.button.content.disabled = False
+            self.button.content.update()
+        else:
+            self.button.controls[0].content.disabled = False
+            self.button.controls[1].content.disabled = False
+            self.button.update()

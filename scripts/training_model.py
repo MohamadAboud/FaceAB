@@ -2,6 +2,7 @@ import math
 import os
 import face_recognition
 from face_recognition.face_detection_cli import image_files_in_folder
+from flet import *
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
 ########################################################################
@@ -47,7 +48,9 @@ class TrainingModel:
             Developer.log("'{}' Images processing start...............\n".format(folderName), mode='info')
             images = image_files_in_folder(fullPathName)
 
-            if len(images) == 0 : continue
+            if len(images) == 0 :
+                TrainingScreen.instance.increaseProgressBar(value=folderValue)
+                continue
 
             increment_value = folderValue / len(images)
             for imagePath in images:
@@ -73,17 +76,13 @@ class TrainingModel:
 
             Developer.log("\n'{}' images processing has been completed\n".format(folderName), mode='info')
 
-        print(
-            f"name : {X_train}",
-            f"X : {len(X_train)}"
-        )
-
         # Determine how many neighbors to use for weighting in the KNN classifier
         if n_neighbors is None:
             n_neighbors = int(round(math.sqrt(len(X_train))))
             Developer.log("Chose n_neighbors automatically:", n_neighbors, mode='info')
 
         # Create and train the KNN classifier
+
         model = KNeighborsClassifier(
             n_neighbors=n_neighbors,
             algorithm=algorithm,
@@ -113,5 +112,7 @@ class TrainingModel:
         path = f"{cls.modelDir}/{cls.__modelName}"
         with open(path, 'wb') as file:
             pickle.dump(model, file)
+            TrainingScreen.instance.make_sure_to_finish()
+
 
         Developer.log(f"\nTraining completed successfully\n....'{path}'", mode='info')

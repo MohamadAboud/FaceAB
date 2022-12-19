@@ -1,11 +1,17 @@
-from  utils.utils import *
+
 
 class Check:
     isFirstTime = True
 
     @classmethod
     def init(cls):
-        check = isExists("data") == True
-        Check.isFirstTime = check == False
+        from utils.utils import isExists, makedirs
 
-        if  check == False : CrateFolder("data"); CrateFolder("data/users"); CrateFolder("data/model")
+        if isExists("data"):
+            if isExists("data/model"):
+                Check.isFirstTime = not isExists("data/model/facemodel.clf")
+        else:
+            makedirs("data/users")
+            makedirs("data/model")
+
+        print(f"Test : {Check.isFirstTime}")

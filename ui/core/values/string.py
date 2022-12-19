@@ -40,7 +40,7 @@ class ImageScreenString:
 class TrainingScreenString:
     img = "https://picsum.photos/id/250/200/300"
 
-    progressText1 = "training..."
+    progressText1 = "training"
     subText = "We are now in the process of creating\n the model for you"
 
     text1 = "Successful!"

@@ -40,3 +40,26 @@ class Home:
         )
 
         self.page.update()
+
+
+    def showBanner(self,text,on_click=None):
+        def close_banner(e):
+            self.page.banner.open = False
+            self.page.update()
+
+            if on_click: on_click()
+
+        self.page.banner = Banner(
+            bgcolor=colors.AMBER_100,
+            leading=Icon(icons.ERROR, color=colors.RED, size=40),
+            content=Text(
+                text,
+                color="black"
+            ),
+            actions=[
+                TextButton("Retry", on_click=close_banner),
+                TextButton("Cancel", on_click=close_banner),
+            ],
+        )
+        self.page.banner.open = True
+        self.page.update()

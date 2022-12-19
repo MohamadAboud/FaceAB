@@ -34,6 +34,11 @@ class ImageScreen(UserControl):
         #     on_click=self.go_to_the_training_screen
         # )
 
+    def __call__(self, *args, **kwargs):
+        from scripts.scripts import StartTakeImages
+        # Run [TakeImages] scripts...
+        StartTakeImages()
+
     def build(self):
         return Stack([
             self._progressscreen(),
@@ -244,8 +249,6 @@ class ImageScreen(UserControl):
             self.closeButton.offset  = transform.Offset(0, 0)
             self.popUp.update()
             self.closeButton.update()
-            # self.button.content.disabled = False
-            # self.button.content.update()
 
         # Update UI ..................
         self.progressBar.update()
@@ -255,10 +258,7 @@ class ImageScreen(UserControl):
     def _go_to_the_training_screen(self, e):
         from ui.routes.routes import TrainingScreen
         from ui.navigator import Navigator
-        from scripts.scripts import TrainingModel
 
         # push TrainingScreen
         Navigator.popAllAndPush(TrainingScreen.init())
-
-        # Run [Training Model] scripts...
-        TrainingModel.train()
+        TrainingScreen.instance()
