@@ -136,8 +136,8 @@ class Mind:
             self.__addInfoToCard(
                 frame=frame,
                 cardOffset=cardOffset,
-                name=facial.userName,
-                age_gender=pred.age_and_gender
+                name= facial.userName,
+                age_gender= pred.age_and_gender
             )
 
         except Exception as err:
