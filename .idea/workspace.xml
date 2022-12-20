@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update take_images script">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add threading to BodyDetector ,GenderAndAge and Facial class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/card2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/card3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/defaultFace.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/done.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/trainingHome.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/facial_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/facial_recognition.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/mind.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mind.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pose_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pose_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/training_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/training_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/scripts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/images&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -252,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671440274420</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="An initial version of the project">
+      <created>1671456106517</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671456106517</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add threading to BodyDetector ,GenderAndAge and Facial class">
+      <created>1671529668720</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671529668721</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -277,6 +284,8 @@
     <MESSAGE value="change all screen to class and update Navigator 1.0" />
     <MESSAGE value="add training_model script and predicting_gender_and_age script" />
     <MESSAGE value="update take_images script" />
-    <option name="LAST_COMMIT_MESSAGE" value="update take_images script" />
+    <MESSAGE value="An initial version of the project" />
+    <MESSAGE value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
   </component>
 </project>

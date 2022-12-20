@@ -1,4 +1,5 @@
 import threading
+
 import cv2
 import face_recognition
 from scripts.training_model import TrainingModel
@@ -8,10 +9,10 @@ class FacialThread(threading.Thread):
     def __init__(self,frame):
         super().__init__()
         self.__frame = frame
-        self.name = None
+        self.userName = None
 
     def run(self):
-        self.name = self._getName()
+        self.userName = self._getName()
 
     def _getName(self) -> str:
         model = TrainingModel.model

@@ -1,10 +1,9 @@
 import threading
-
 from cvzone.PoseModule import PoseDetector
 import cv2
-
 from utils.dev import Developer
 
+detector = PoseDetector()
 
 class BodyDetectorThread(threading.Thread):
 
@@ -13,17 +12,16 @@ class BodyDetectorThread(threading.Thread):
         # ------------------------------
         self.__frame = frame
         self.__isDraw = isDraw
-        self.__detector = PoseDetector()
 
-        self.start_and_end_point = None
+        self.points = None
 
     def run(self):
-        self.start_and_end_point = self.__pose()
+        self.points = self.__pose()
 
     def __pose(self):
         # pose --------------------------------------------------------------
-        self.__frame = self.__detector.findPose(self.__frame, draw=Developer.isTesting)
-        lmList, bboxInfo = self.__detector.findPosition(self.__frame, bboxWithHands=False,draw = False)
+        self.__frame = detector.findPose(self.__frame, draw=Developer.isTesting)
+        lmList, bboxInfo = detector.findPosition(self.__frame, bboxWithHands=False,draw = False)
         if bboxInfo:
             landmarks = lmList[11][1:]
             start_point = (landmarks[0] - 50, landmarks[1])

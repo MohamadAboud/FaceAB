@@ -1,4 +1,6 @@
+import multiprocessing
 import threading
+
 import cv2
 
 
@@ -25,7 +27,7 @@ class GenderAndAgeThread(threading.Thread):
     def __init__(self, frame):
         super().__init__()
         self.__frame = frame
-        self.age_and_gender = None,None
+        self.age_and_gender = None
 
         # if not GenderAndAgeThread.isLoaded : self._loadModel()
 
