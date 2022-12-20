@@ -11,10 +11,7 @@ def initialize():
 
 if __name__ == '__main__':
     initialize()
-
-
     # -----------------------------
-
     runApp(
         target=Home.init,
         assets_dir="assets"

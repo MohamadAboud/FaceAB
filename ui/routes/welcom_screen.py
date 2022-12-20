@@ -119,30 +119,38 @@ class WelcomScreen(UserControl):
             )
         )
 
-    # def _EnableAndDisable(self):
-    #     # Disable Buttons
-    #     if Check.isFirstTime:
-    #         self.button.content.disabled = True
-    #         self.button.content.update()
-    #     else:
-    #         self.button.controls[0].content.disabled = True
-    #         self.button.controls[1].content.disabled = True
-    #         self.button.update()
-    #
-    #     # Enable Buttons
-    #     if Check.isFirstTime:
-    #         self.button.content.disabled = False
-    #         self.button.content.update()
-    #     else:
-    #         self.button.controls[0].content.disabled = False
-    #         self.button.controls[1].content.disabled = False
-    #         self.button.update()
+    def _EnableAndDisable(self,enable=False,disable=False):
+        if enable and disable: return
+
+        if enable:
+            # Enable Buttons
+            if Check.isFirstTime:
+                self.button.content.disabled = False
+                self.button.content.update()
+            else:
+                self.button.controls[0].content.disabled = False
+                self.button.controls[1].content.disabled = False
+                self.button.update()
+
+        if disable:
+            # Disable Buttons
+            if Check.isFirstTime:
+                self.button.content.disabled = True
+                self.button.content.update()
+            else:
+                self.button.controls[0].content.disabled = True
+                self.button.controls[1].content.disabled = True
+                self.button.update()
 
     def runApp(self,e):
+        self._EnableAndDisable(disable=True)
+
         from scripts.mind import Mind
 
         mind = Mind(title="AI")
         mind.run()
+
+        self._EnableAndDisable(enable=True)
 
 
     def go_to_image_taking_screen(self,e):
