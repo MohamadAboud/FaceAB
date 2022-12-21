@@ -23,6 +23,8 @@ class ImageScreenString:
         textFieldError = "Name is required"
 
         fileNotExistsError = "This name already exists"
+        osError = "This name is not valid"
+        error = "You have an error"
 
         closeTooltip = "Your facial data will be deleted,\n are you sure?"
 

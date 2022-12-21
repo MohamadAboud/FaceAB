@@ -21,4 +21,3 @@ def DeleteFolder(path):
             os.remove(f'{path}/{file}')  # delete file
 
         os.rmdir(path)
-

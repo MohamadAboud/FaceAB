@@ -219,6 +219,7 @@ class ImageScreen(UserControl):
 
 
         # change folder name ...
+        errorText = ""
         try:
             from scripts.scripts import Data
             ChangeNameFolder(
@@ -229,11 +230,16 @@ class ImageScreen(UserControl):
             self._go_to_the_training_screen('')
 
         except FileExistsError:
-            self.textField.controls[1].error_text = AppString.imagescreen.PopUp.fileNotExistsError
-            self.textField.controls[1].update()
-            return
+            errorText = AppString.imagescreen.PopUp.fileNotExistsError
+        except OSError:
+            errorText = AppString.imagescreen.PopUp.osError
         except Exception as err:
+            errorText = AppString.imagescreen.PopUp.error
             print(f"Error : {err}")
+
+        if len(errorText) != 0:
+            self.textField.controls[1].error_text = errorText
+            self.textField.controls[1].update()
 
     def increaseProgressBar(self):
         val = self.progressBar.value

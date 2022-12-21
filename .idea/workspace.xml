@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add threading to BodyDetector ,GenderAndAge and Facial class">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add run in a separate window to facial recognition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/facial_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/facial_recognition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/mind.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/pose_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pose_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/images&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "last_opened_file_path": "F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/images",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
@@ -50,70 +51,7 @@
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="dev" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ui/widgets" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ui/widgets/dev.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="facial_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/facial_recognition.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/home.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="3.CardID (GUI)" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,57 +73,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="predicting_gender_and_age" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="3.CardID (GUI)" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.facial_recognition" />
-        <item itemvalue="Python.predicting_gender_and_age" />
-        <item itemvalue="Python.dev" />
-        <item itemvalue="Python.home" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -259,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671529668721</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update info card to use multi-threading">
+      <created>1671534464298</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671534464298</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add run in a separate window to facial recognition">
+      <created>1671537689231</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671537689231</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -286,6 +187,8 @@
     <MESSAGE value="update take_images script" />
     <MESSAGE value="An initial version of the project" />
     <MESSAGE value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
+    <MESSAGE value="Update info card to use multi-threading" />
+    <MESSAGE value="Add run in a separate window to facial recognition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add run in a separate window to facial recognition" />
   </component>
 </project>

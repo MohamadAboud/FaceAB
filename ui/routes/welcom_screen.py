@@ -25,11 +25,30 @@ class WelcomScreen(UserControl):
         )
 
         self.startAndAddButton = Column([
-            CustomButton(
+            CustomButtonDropDown(
                 text=AppString.splashscreen.button2,
                 width=320,
                 height=40,
-                on_click=self.runApp
+                on_click=self.runApp,
+                items=[
+                    CustomItem(
+                        text="Card",
+                        on_click=self.__go_to_card_window
+                    ),
+                    CustomItem(
+                        text="Body",
+                        on_click=self.__go_to_body_window
+                    ),
+                    CustomItem(
+                        text="Face",
+                        on_click=self.__go_to_face_window
+                    ),
+                    CustomItem(
+                        text="Age ..",
+                        on_click=self.__go_to_age_and_gender_window
+                    ),
+                ],
+                hTextColor="white",
             ),
 
             CustomButton(
@@ -119,38 +138,12 @@ class WelcomScreen(UserControl):
             )
         )
 
-    def _EnableAndDisable(self,enable=False,disable=False):
-        if enable and disable: return
-
-        if enable:
-            # Enable Buttons
-            if Check.isFirstTime:
-                self.button.content.disabled = False
-                self.button.content.update()
-            else:
-                self.button.controls[0].content.disabled = False
-                self.button.controls[1].content.disabled = False
-                self.button.update()
-
-        if disable:
-            # Disable Buttons
-            if Check.isFirstTime:
-                self.button.content.disabled = True
-                self.button.content.update()
-            else:
-                self.button.controls[0].content.disabled = True
-                self.button.controls[1].content.disabled = True
-                self.button.update()
 
     def runApp(self,e):
-        self._EnableAndDisable(disable=True)
-
         from scripts.mind import Mind
 
         mind = Mind(title="AI")
         mind.run()
-
-        self._EnableAndDisable(enable=True)
 
 
     def go_to_image_taking_screen(self,e):
@@ -158,3 +151,13 @@ class WelcomScreen(UserControl):
         # push ImageScreen
         Navigator.push(ImageScreen.init())
         ImageScreen.instance()
+
+    def __go_to_card_window(self):
+        self.runApp('')
+
+    def __go_to_body_window(self):
+        print("go_to_body_window")
+    def __go_to_face_window(self):
+        print("__go_to_face_window")
+    def __go_to_age_and_gender_window(self):
+        print("__go_to_age_and_gender_window")
