@@ -24,33 +24,47 @@ face_cascade = cv2.CascadeClassifier(f'{modelsPath}/haarcascade_frontalface_alt.
 class GenderAndAgeThread(threading.Thread):
 
     # isLoaded = False
-    def __init__(self, frame):
+    def __init__(self, frame=None):
         super().__init__()
         self.__frame = frame
         self.age_and_gender = None
 
         # if not GenderAndAgeThread.isLoaded : self._loadModel()
 
+    def __covertFrame(self,frame):
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        return frame
+
+    @property
+    def frame(self):
+        small_frame = cv2.resize(self.__frame, (0, 0), fx=0.5, fy=0.5)
+        return small_frame
+
     def run(self):
-        self.age_and_gender = self._getAgeAndGender()
+        data = self.__getAgeAndGender(self.__frame)
+        if data is not None:
+            self.age_and_gender = data[:2]
 
+    def __drwaBox(self,frame,text,loc):
+        from utils.edit_frame import drawBox
 
-    # def _loadModel(self):
-    #     self.age_net = cv2.dnn.readNetFromCaffe(f'{modelsPath}/deploy_age.prototxt', f'{modelsPath}/age_net.caffemodel')
-    #     self.gender_net = cv2.dnn.readNetFromCaffe(f'{modelsPath}/deploy_gender.prototxt', f'{modelsPath}/gender_net.caffemodel')
-    #     self.face_cascade = cv2.CascadeClassifier(f'{modelsPath}/haarcascade_frontalface_alt.xml')
-    #     GenderAndAgeThread.isLoaded = True
-    #     return (self.age_net, self.gender_net, self.face_cascade)
+        (x, y, w, h) = tuple(loc[0])
+        (top, right, bottom, left) = (y, x + w, y + h, x)
 
+        drawBox(frame, (left, top), (bottom, right))
+        # Draw a label with a text below the face
+        cv2.rectangle(frame, (left - 40, bottom + 50), (right + 40, bottom + 10), (255, 255, 255), cv2.FILLED)
+        font = cv2.FONT_HERSHEY_DUPLEX
+        cv2.putText(frame, text, (left - 30, bottom + 35), font, 0.7, (0, 0, 0), 1)
 
-    def _getAgeAndGender(self):
+    def __getAgeAndGender(self,frame):
         # Convert frame from BGR to RGB...
-        gray = cv2.cvtColor(self.__frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, 1.1, 5)
+        gray_frame = self.__covertFrame(frame)
+        faces = face_cascade.detectMultiScale(gray_frame, 1.1, 5)
 
         for (x, y, h, w) in faces:
 
-            blob = cv2.dnn.blobFromImage(self.__frame, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
+            blob = cv2.dnn.blobFromImage(frame, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
 
             # Predict Gender
             gender_net.setInput(blob)
@@ -62,4 +76,28 @@ class GenderAndAgeThread(threading.Thread):
             age_preds = age_net.forward()
             age = ageList[age_preds[0].argmax()]
 
-            return  (age,gender)
+            self.__frame = frame.copy()
+            self.__drwaBox(self.__frame,text=f"{age} | {gender}",loc=faces)
+
+            return  (age,gender,faces)
+
+    def run_in_separate_window(self,src=0):
+
+        cap = cv2.VideoCapture(src)
+
+        while True:
+            ret,frame = cap.read()
+
+            data = self.__getAgeAndGender(frame)
+            if data is not None:
+                age, gender, loc = data
+                self.__drwaBox(frame, text=f"{age} | {gender}", loc=loc)
+
+
+            cv2.imshow("Age and gender classification",frame)
+            key = cv2.waitKey(1)
+            if key == 27 or key == ord('q'):
+                break
+
+        cap.release()
+        cv2.destroyAllWindows()

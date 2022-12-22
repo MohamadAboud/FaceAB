@@ -1,6 +1,4 @@
 from ui.Home import Home
-from flet import *
-
 from utils.dev import Developer
 
 

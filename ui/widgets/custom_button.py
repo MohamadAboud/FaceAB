@@ -9,7 +9,7 @@ class CustomItem:
         self.on_click = on_click
 
 
-def CustomButton(text: str, width=None, height=None , on_click=None , dColor = AppColor.primaryColor ,hColor = colors.WHITE,dTextColor = AppColor.secondaryColor,hTextColor = colors.BLACK,disabled=False,padding = None,expand = False, shape=RoundedRectangleBorder(radius=12),):
+def CustomButton(text: str, width=None, height=None , on_click=None , dColor = AppColor.primaryColor ,hColor = "#9d98ca",dTextColor = AppColor.secondaryColor,hTextColor = colors.BLACK,disabled=False,padding = None,expand = False, shape=RoundedRectangleBorder(radius=12),):
 
 
     button = Container(
@@ -44,7 +44,7 @@ def CustomButton(text: str, width=None, height=None , on_click=None , dColor = A
 
 
 
-def CustomButtonDropDown(text: str,items:List[CustomItem], width=AppSize.width, height=AppSize.height , on_click=None , dColor = AppColor.primaryColor ,hColor = colors.WHITE,dTextColor = AppColor.secondaryColor,hTextColor = colors.BLACK,disabled=False):
+def CustomButtonDropDown(text: str,items:List[CustomItem], width=AppSize.width, height=AppSize.height , on_click=None , dColor = AppColor.primaryColor ,hColor = "#9d98ca" ,dTextColor = AppColor.secondaryColor,hTextColor = colors.BLACK,disabled=False):
 
     def onChange(e):
         val = drop.value
@@ -76,7 +76,7 @@ def CustomButtonDropDown(text: str,items:List[CustomItem], width=AppSize.width, 
                 ),
                 border_color=hColor,
                 color=hColor,
-                opacity=0.2,
+                opacity=0.01,
                 focused_color=hColor,
                 focused_bgcolor= hColor,
                 disabled=disabled,
@@ -114,6 +114,7 @@ def CustomButtonDropDown(text: str,items:List[CustomItem], width=AppSize.width, 
                 height=height,
                 on_click=on_click,
                 disabled=disabled,
+                hColor=hColor,
                 shape=RoundedRectangleBorder(
                     radius=border_radius.only(
                         topLeft=12,

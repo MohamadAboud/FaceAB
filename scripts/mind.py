@@ -131,6 +131,11 @@ class Mind:
             facial.join()
             pred.join()
 
+            if Developer.isTesting:
+                cv2.imshow("Body", body.frame)
+                cv2.imshow("Face", facial.frame)
+                cv2.imshow("Age and gender", pred.frame)
+
             cardOffset = self.__getCardOffset(points=body.points)
             self.__cardInfo(frame, cardOffset)
             self.__addInfoToCard(

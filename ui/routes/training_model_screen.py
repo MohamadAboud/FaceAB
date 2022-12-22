@@ -67,14 +67,21 @@ class TrainingScreen(UserControl):
             height=AppSize.height,
             width= AppSize.width,
             controls=[
+                # Container(
+                #     bgcolor=AppColor.primaryColor ,
+                #     padding=padding.all(16),
+                #     shape= BoxShape.CIRCLE,
+                #     content= Icon(
+                #         icons.DONE,
+                #         color=AppColor.secondaryColor,
+                #         scale= 1.8
+                #     )
+                # ),
                 Container(
-                    bgcolor=AppColor.primaryColor ,
-                    padding=padding.all(16),
-                    shape= BoxShape.CIRCLE,
-                    content= Icon(
-                        icons.DONE,
-                        color=AppColor.secondaryColor,
-                        scale= 1.8
+                    bgcolor=AppColor.backgroundColor,
+                    content=Image(
+                        src=AppString.trainingscreen.doneImg,
+                        fit=ImageFit.COVER,
                     )
                 ),
 
@@ -120,7 +127,10 @@ class TrainingScreen(UserControl):
                 Container(height=20), # Padding
 
                 # Text............
-                self.progressText,
+                Container(
+                    # on_click=self.Test1,
+                    content=self.progressText
+                ),
 
                 Container(height=5), # Padding
 
@@ -177,14 +187,12 @@ class TrainingScreen(UserControl):
         from utils.check_file import Check
         Check.init()
 
-        time.sleep(3)
+        time.sleep(10.5)
         Navigator.popAllAndPush(WelcomScreen.init())
 
 
     # def Test1(self,e):
-    #     for i in range(1,101):
-    #         self.increaseProgressBar(1)
-    #         time.sleep(0.04)
+    #     TrainingScreen.instance()
     #
     # def Test2(self,e):
     #     val = self.selectedIndex + 1

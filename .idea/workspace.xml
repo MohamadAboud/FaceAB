@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add run in a separate window to facial recognition">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="Add a new button and fix some errors">
+      <change afterPath="$PROJECT_DIR$/ui/core/theme/theme.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/facial_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/facial_recognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mind.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/mind.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pose_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pose_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/predicting_gender_and_age.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/take_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/take_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/colors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/training_model_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/training_model_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/widgets/custom_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/file_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/edit_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/edit_frame.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +47,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "last_opened_file_path": "F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/images",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
@@ -160,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671537689231</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add a new button and fix some errors">
+      <created>1671611354547</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671611354547</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -171,7 +192,50 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -189,6 +253,18 @@
     <MESSAGE value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
     <MESSAGE value="Update info card to use multi-threading" />
     <MESSAGE value="Add run in a separate window to facial recognition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add run in a separate window to facial recognition" />
+    <MESSAGE value="Add a new button and fix some errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a new button and fix some errors" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scripts/pose_detector.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

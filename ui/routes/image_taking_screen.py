@@ -74,7 +74,10 @@ class ImageScreen(UserControl):
                         horizontal_alignment=CrossAxisAlignment.CENTER,
                         controls=[
                             # Text --------------------
-                            self.progressText,
+                            Container(
+                                on_click=self.Test,
+                                content=self.progressText
+                            ),
 
                             # ProgressBar --------------------
                             self.progressBar,
@@ -127,7 +130,7 @@ class ImageScreen(UserControl):
 
         self.popUp = Container(
             padding=padding.symmetric(horizontal=20,vertical=20),
-            bgcolor="white",
+            bgcolor="#7c7c94",
             opacity= 0.95,
             top=AppSize.height * 0.15,
             left=AppSize.width  * 0.05,
@@ -147,7 +150,7 @@ class ImageScreen(UserControl):
                             AppString.imagescreen.PopUp.title,
                             weight=FontWeight.BOLD,
                             scale=1.8,
-                            color='black'
+                            color='white'
                         ),
                     ],alignment=MainAxisAlignment.CENTER),
 
@@ -156,7 +159,7 @@ class ImageScreen(UserControl):
                     # Text --------------------
                     Text(
                         AppString.imagescreen.PopUp.subText,
-                        color='black'
+                        color='white'
                     ),
 
                     Container(height=10),  # Padding
@@ -180,12 +183,13 @@ class ImageScreen(UserControl):
         return self.popUp
 
     def _closePopUpButton(self):
+
         self.closeButton = Container(
             bottom=95,
             left= 150,
             right=150,
             height=35,
-            bgcolor="black",
+            bgcolor="white",
             shape=BoxShape.CIRCLE,
             content=Icon(icons.CLOSE,size=14),
             on_click=self._closePopUp,
@@ -268,3 +272,12 @@ class ImageScreen(UserControl):
         # push TrainingScreen
         Navigator.popAllAndPush(TrainingScreen.init())
         TrainingScreen.instance()
+
+
+    def Test(self,e):
+        ImageScreen.instance()
+    def openTest(self,e):
+        self.popUp.offset = transform.Offset(0, 0)
+        self.closeButton.offset = transform.Offset(0, 0)
+        self.popUp.update()
+        self.closeButton.update()

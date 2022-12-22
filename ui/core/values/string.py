@@ -2,8 +2,8 @@
 class Path:
     saveImg = "./data/users" # [ users folder -> user-00000 ]
 
-class SplashScreenString:
-    img = "/images/splashscreen_robot.gif"
+class WelcomeScreenString:
+    img = "/images/welcom_image_light.gif"
     welcomText = "Welcome"
     subText = ['Face','Recognition','application']
     introText = ['is a facial recognition app which','detects person from your training model']
@@ -28,7 +28,7 @@ class ImageScreenString:
 
         closeTooltip = "Your facial data will be deleted,\n are you sure?"
 
-    img = "images/loading.gif"
+    img = "images/loading_light.gif"
     text1 = "Verification Process"
     text2 = "Smile & blink your eyes,then move your\nhead slowly to complete the process"
 
@@ -40,7 +40,8 @@ class ImageScreenString:
 
 
 class TrainingScreenString:
-    img = "https://picsum.photos/id/250/200/300"
+    img = "images/traning_image.gif"
+    doneImg = "images/done.gif"
 
     progressText1 = "training"
     subText = "We are now in the process of creating\n the model for you"
@@ -51,7 +52,7 @@ class TrainingScreenString:
 class AppString:
 
     name = "FACAB"
-    splashscreen = SplashScreenString()
+    welcomescreen = WelcomeScreenString()
     imagescreen = ImageScreenString()
     trainingscreen = TrainingScreenString()
 

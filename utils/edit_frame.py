@@ -40,6 +40,7 @@ def cropFace(frame):
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
     # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+    small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
     rgb_small_frame = small_frame[:, :, ::-1]
 
     # Find all the faces and face encodings in the current frame of video
@@ -53,17 +54,17 @@ def cropFace(frame):
         bottom *= 4
         left *= 4
 
+        # Draw a box around the face
+        frameCopy = frame.copy()
+        frame = drawBox(frame, (left, top), (bottom, right))
+
         top -= 45
         right += 20
         bottom += 20
         h = bottom - top
         w = right - left
 
-        # Draw a box around the face
-        frameCopy = frame.copy()
-        frame = drawBox(frame, (left, top), (bottom, right))
-
         cropped_face = frameCopy[top: (top + h), left: (left + w)].copy()
-        cropped_face = cv2.cvtColor(cropped_face, cv2.COLOR_BGR2GRAY)
+        cropped_face = cv2.cvtColor(cropped_face, cv2.COLOR_BGR2RGB)
 
         return (frame, cropped_face)

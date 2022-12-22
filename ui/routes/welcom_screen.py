@@ -17,7 +17,7 @@ class WelcomScreen(UserControl):
 
         # Buttons --------------------
         self.getStartedButton = CustomButton(
-            text=AppString.splashscreen.button1,
+            text=AppString.welcomescreen.button1,
             width=AppSize.width * 0.9,
             height=40,
             padding=padding.only(top=15, bottom=25),
@@ -26,18 +26,14 @@ class WelcomScreen(UserControl):
 
         self.startAndAddButton = Column([
             CustomButtonDropDown(
-                text=AppString.splashscreen.button2,
-                width=320,
-                height=40,
+                text=AppString.welcomescreen.button2,
+                width=325,
+                height=47,
                 on_click=self.runApp,
                 items=[
                     CustomItem(
                         text="Card",
                         on_click=self.__go_to_card_window
-                    ),
-                    CustomItem(
-                        text="Body",
-                        on_click=self.__go_to_body_window
                     ),
                     CustomItem(
                         text="Face",
@@ -52,7 +48,7 @@ class WelcomScreen(UserControl):
             ),
 
             CustomButton(
-                text=AppString.splashscreen.button3,
+                text=AppString.welcomescreen.button3,
                 width=320,
                 height=40,
                 dColor=AppColor.secondaryColor,
@@ -78,7 +74,7 @@ class WelcomScreen(UserControl):
                 controls=[
                     # Image --------------------
                     Image(
-                        src=AppString.splashscreen.img,
+                        src=AppString.welcomescreen.img,
                         height=250,
                         width=350,
                         fit=ImageFit.CONTAIN
@@ -94,7 +90,7 @@ class WelcomScreen(UserControl):
                             controls=[
                                 # Welcome[Text] --------------------
                                 Text(
-                                    f"   {AppString.splashscreen.welcomText}",
+                                    f"   {AppString.welcomescreen.welcomText}",
                                     size=16,
                                     color=AppColor.primaryColor,
                                     weight=FontWeight.BOLD,
@@ -103,25 +99,25 @@ class WelcomScreen(UserControl):
                                 # Face Recognition Application[Text] --------------------
                                 Column([
                                     Row([
-                                        Text(f"{AppString.splashscreen.subText[0]}".upper(), size=25, weight=FontWeight.BOLD),
-                                        Text(f"{AppString.splashscreen.subText[1]}".upper(), size=25, color=AppColor.primaryColor,
+                                        Text(f"{AppString.welcomescreen.subText[0]}".upper(), size=25, weight=FontWeight.BOLD),
+                                        Text(f"{AppString.welcomescreen.subText[1]}".upper(), size=25, color=AppColor.primaryColor,
                                              weight=FontWeight.BOLD),
 
                                     ]),
-                                    Text(f"{AppString.splashscreen.subText[2]}".upper(), size=25, weight=FontWeight.BOLD)
+                                    Text(f"{AppString.welcomescreen.subText[2]}".upper(), size=25, weight=FontWeight.BOLD)
                                 ],spacing=0),
 
                                 # Introduction[Text] --------------------
                                 Column([
                                     Row([
-                                        Text(f"{AppString.name[:3]}", opacity=0.4),
+                                        Text(f"{AppString.name[:3]}", opacity=0.6),
                                         Text(f"{AppString.name[3:]}", color=AppColor.primaryColor),
-                                        Text(f" {AppString.splashscreen.introText[0]}", opacity=0.4),
+                                        Text(f" {AppString.welcomescreen.introText[0]}", opacity=0.6),
 
                                     ],spacing=0),
-                                    Text(f"{AppString.splashscreen.introText[1]}", opacity=0.4,
+                                    Text(f"{AppString.welcomescreen.introText[1]}", opacity=0.6,
                                          text_align=TextAlign.START)
-                                ],spacing=0, opacity=0.4),
+                                ],spacing=0, opacity=0.6),
 
                                 Container(height=10),  # Padding
 
@@ -158,6 +154,9 @@ class WelcomScreen(UserControl):
     def __go_to_body_window(self):
         print("go_to_body_window")
     def __go_to_face_window(self):
-        print("__go_to_face_window")
+        from scripts.scripts import FacialThread
+        FacialThread().run_in_separate_window()
+
     def __go_to_age_and_gender_window(self):
-        print("__go_to_age_and_gender_window")
+        from scripts.scripts import GenderAndAgeThread
+        GenderAndAgeThread().run_in_separate_window()

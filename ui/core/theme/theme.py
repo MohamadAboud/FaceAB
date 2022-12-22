@@ -1,0 +1,5 @@
+
+
+
+class AppTheme:
+    isDarkMode = False

@@ -12,15 +12,27 @@ class BodyDetectorThread(threading.Thread):
         # ------------------------------
         self.__frame = frame
         self.__isDraw = isDraw
-
         self.points = None
+        # ------------------------------
+
+    def __covertFrame(self,frame):
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        return rgb_frame
+
+    @property
+    def frame(self):
+        f = cv2.cvtColor(self.__frame,cv2.COLOR_RGB2BGR)
+        small_frame = cv2.resize(f, (0, 0), fx=0.5, fy=0.5)
+        return small_frame
 
     def run(self):
         self.points = self.__pose()
 
     def __pose(self):
+        rgb_frame = self.__covertFrame(self.__frame)
         # pose --------------------------------------------------------------
-        self.__frame = detector.findPose(self.__frame, draw=Developer.isTesting)
+        self.__frame = detector.findPose(rgb_frame, draw=Developer.isTesting)
+        cv2.imshow('selftitle', self.__frame)
         lmList, bboxInfo = detector.findPosition(self.__frame, bboxWithHands=False,draw = False)
         if bboxInfo:
             landmarks = lmList[11][1:]

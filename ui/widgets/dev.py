@@ -3,7 +3,7 @@ from flet import *
 def Signature(*args):
 
     def on_hover(e):
-        sig.opacity = 1 if sig.opacity == 0.3 else 0.3
+        sig.opacity = 1 if sig.opacity == 0.4 else 0.4
         sig.scale = 1.5 if sig.opacity == 1 else 1
         sig.content.weight = FontWeight.BOLD if sig.content.weight == FontWeight.W_400 else FontWeight.W_400
 
@@ -12,7 +12,7 @@ def Signature(*args):
     sig = Container(
         alignment=alignment.center,
         width=350,
-        opacity= 0.3,
+        opacity= 0.4,
         animate_opacity=300,
         animate_scale=animation.Animation(600,AnimationCurve.BOUNCE_OUT),
         scale=1,

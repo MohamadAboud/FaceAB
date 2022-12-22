@@ -35,15 +35,16 @@ def StartTakeImages():
         try:
             if count == 100: break
 
-            frame, croppedFace = cropFace(frame)
+            data = cropFace(frame)
+            frame, croppedFace = data
 
             count += 1
             ImageScreen.instance.increaseProgressBar()
 
             if Developer.isTesting: cv2.imshow("DeveloperMode[True]", croppedFace)
             save_image(croppedFace, count)
-        except:
-            pass
+        except Exception as err:
+            Developer.log(f"{err}",mode='error')
 
 
         cv2.imshow("Take Image", frame)

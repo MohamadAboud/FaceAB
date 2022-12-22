@@ -24,7 +24,7 @@ class Home:
         # Initialize --------------------
         self.page.title = AppString.name
         self.page.bgcolor = AppColor.backgroundColor
-        self.page.theme_mode = ThemeMode.DARK
+        self.page.theme_mode = AppColor.themeMode
         self.page.window_width = AppSize.width
         self.page.window_height = AppSize.height
         self.page.window_resizable = False

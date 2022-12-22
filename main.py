@@ -5,8 +5,11 @@ from flet import app as runApp
 def initialize():
     Check.init()
 
-    from scripts.training_model import TrainingModel
-    TrainingModel.load()
+    try:
+        from scripts.training_model import TrainingModel
+        TrainingModel.load()
+    except:
+        ...
 
 
 if __name__ == '__main__':

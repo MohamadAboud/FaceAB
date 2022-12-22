@@ -7,12 +7,12 @@ def CustomTextField(title:str,error_text="",hint_text=None,icons=None,on_submit=
     return Column([
             Text(
                 title,
-                color="black"
+                color="white"
             ),
             TextField(
                 hint_text=hint_text,
                 hint_style=TextStyle(
-                    color="black",
+                    color="white",
                 ),
                 bgcolor="red",
                 border_radius=border_radius.all(8),
@@ -20,7 +20,7 @@ def CustomTextField(title:str,error_text="",hint_text=None,icons=None,on_submit=
                 focused_border_color=AppColor.primaryColor,
                 content_padding=padding.only(left=8, bottom=5),
                 text_style=TextStyle(
-                    color="black",
+                    color="white",
                 ),
                 max_length=13,
                 prefix_icon=icons,
