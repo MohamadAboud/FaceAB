@@ -14,9 +14,10 @@ class WelcomeScreenString:
 class ImageScreenString:
 
     class PopUp:
-        title = "Sign in"
-        subText = "Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit. Maecenas est felis,"
-        buttonText= "Done"
+        title = "User Name"
+        subText = "Can you tell me your name\nso we can set up your profile"
+        buttonText1 = "Submit & Add another face"
+        buttonText2 = "Submit & Train"
 
         textFieldTitle = "Name"
         textFieldHintText = "Enter your name"

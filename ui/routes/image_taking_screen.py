@@ -41,13 +41,14 @@ class ImageScreen(UserControl):
 
     def build(self):
         return Stack([
-            self._progressscreen(),
-            self._namePopUp(),
-            self._closePopUpButton()
+            self.__progressscreen(),
+            self.__namePopUp(),
+            self.__closePopUpButton()
         ])
 
+    ##############################| UI |##############################
 
-    def _progressscreen(self):
+    def __progressscreen(self):
         return Container(
             height=AppSize.height,
             width=AppSize.width,
@@ -75,7 +76,7 @@ class ImageScreen(UserControl):
                         controls=[
                             # Text --------------------
                             Container(
-                                on_click=self.Test,
+                                on_click=self.openTest,
                                 content=self.progressText
                             ),
 
@@ -112,7 +113,7 @@ class ImageScreen(UserControl):
             ])
         )
 
-    def _namePopUp(self):
+    def __namePopUp(self):
 
 
         def on_change(e): # INFO: To refresh the UI when typing
@@ -124,13 +125,13 @@ class ImageScreen(UserControl):
                         hint_text=AppString.imagescreen.PopUp.textFieldHintText,
                         icons=icons.PERSON,
                         # error_text="Test....",
-                        on_submit=self._chackUserName,
+                        on_submit=self.__submit,
                         on_change= on_change
                     )
 
         self.popUp = Container(
             padding=padding.symmetric(horizontal=20,vertical=20),
-            bgcolor="#7c7c94",
+            bgcolor="black",
             opacity= 0.95,
             top=AppSize.height * 0.15,
             left=AppSize.width  * 0.05,
@@ -159,7 +160,8 @@ class ImageScreen(UserControl):
                     # Text --------------------
                     Text(
                         AppString.imagescreen.PopUp.subText,
-                        color='white'
+                        color='white',
+                        size=17,
                     ),
 
                     Container(height=10),  # Padding
@@ -169,48 +171,62 @@ class ImageScreen(UserControl):
                     Container(height=10),  # Padding
 
                     CustomButton(
-                        text= AppString.imagescreen.PopUp.buttonText,
+                        text=AppString.imagescreen.PopUp.buttonText1,
+                        width=AppSize.width * 0.8,
+                        dColor="white",
+                        hColor="#deddd9",
+                        dTextColor="#808080",
+                        hTextColor="black",
+                        on_click=self.__check_and_go_to_the_welcome_screen
+                    ),
+
+                    CustomButton(
+                        text= AppString.imagescreen.PopUp.buttonText2,
                         width= AppSize.width * 0.8,
                         dColor="black",
                         dTextColor="white",
                         hColor="#deddd9",
-                        on_click=self._chackUserName
-                    )
-
+                        on_click=self.__check_and_go_to_the_training_screen
+                    ),
                 ]
             )
         )
         return self.popUp
 
-    def _closePopUpButton(self):
+    ##############################| Private methods |##############################
 
-        self.closeButton = Container(
+    def __closePopUpButton(self):
+
+        self.closeButton = Card(
             bottom=95,
-            left= 150,
+            left=150,
             right=150,
+            elevation=10,
             height=35,
-            bgcolor="white",
-            shape=BoxShape.CIRCLE,
-            content=Icon(icons.CLOSE,size=14),
-            on_click=self._closePopUp,
             tooltip=AppString.imagescreen.PopUp.closeTooltip,
             offset=transform.Offset(0, 3),
             animate_offset=animation.Animation(1000),
+            content=Container(
+                bgcolor="white",
+                shape=BoxShape.CIRCLE,
+                on_click=self.__destroy_the_process,
+                content=Icon(icons.CLOSE,size=14),
             )
+        )
+
         return self.closeButton
 
-    def _closePopUp(self,e):
+    def __closePopUp(self):
+        # close the popup
         self.popUp.offset = transform.Offset(0, -2)
         self.closeButton.offset = transform.Offset(0, 3)
         self.popUp.update()
         self.closeButton.update()
 
+        # wait for animation to finish
         time.sleep(1)
-        from ui.navigator import Navigator
-        Navigator.pop()
 
-
-    def _chackUserName(self,e):
+    def __chackUserName(self,method=None):
         self.textField.controls[1].error_text = ""
         name = self.textField.controls[1].value
 
@@ -231,7 +247,8 @@ class ImageScreen(UserControl):
                 oldname=f"user-{Data.UID}",
                 newname=f"{name.lower()}",
             )
-            self._go_to_the_training_screen('')
+            if method: method()
+            return
 
         except FileExistsError:
             errorText = AppString.imagescreen.PopUp.fileNotExistsError
@@ -244,6 +261,53 @@ class ImageScreen(UserControl):
         if len(errorText) != 0:
             self.textField.controls[1].error_text = errorText
             self.textField.controls[1].update()
+
+    ##############################| Events |##############################
+
+    def __submit(self,e):
+        ...
+
+    def __check_and_go_to_the_welcome_screen(self, e):
+        def method():
+            # close PopUp
+            self.__closePopUp()
+
+            from ui.routes.routes import WelcomScreen
+            from ui.navigator import Navigator
+            # push WelcomScreen
+            Navigator.popAllAndPush(WelcomScreen.init())
+            WelcomScreen.instance()
+
+        self.__chackUserName(method=method)
+
+    def __check_and_go_to_the_training_screen(self, e):
+        def method():
+            # close PopUp
+            self.__closePopUp()
+
+            from ui.routes.routes import TrainingScreen
+            from ui.navigator import Navigator
+            # push TrainingScreen
+            Navigator.popAllAndPush(TrainingScreen.init())
+            TrainingScreen.instance()
+
+        self.__chackUserName(method=method)
+
+    def __destroy_the_process(self,e):
+        # close PopUp ....
+        self.__closePopUp()
+
+        # delete the folder and images ....
+        from utils.utils import DeleteFolder
+        from scripts.scripts import Data
+        path = os.path.join(AppString.path.saveImg, f"user-{Data.UID}")
+        DeleteFolder(path=path)
+
+        # go to the previous page ....
+        from ui.navigator import Navigator
+        Navigator.pop()
+
+    ##############################| Public methods |##############################
 
     def increaseProgressBar(self):
         val = self.progressBar.value
@@ -264,15 +328,7 @@ class ImageScreen(UserControl):
         self.progressBar.update()
         self.progressText.update()
 
-
-    def _go_to_the_training_screen(self, e):
-        from ui.routes.routes import TrainingScreen
-        from ui.navigator import Navigator
-
-        # push TrainingScreen
-        Navigator.popAllAndPush(TrainingScreen.init())
-        TrainingScreen.instance()
-
+    ##############################| Test |##############################
 
     def Test(self,e):
         ImageScreen.instance()
