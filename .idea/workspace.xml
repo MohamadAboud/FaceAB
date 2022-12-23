@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="fix errors">
-      <change afterPath="$PROJECT_DIR$/assets/doc/screens.png" afterDir="false" />
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update documents">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,15 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "last_opened_file_path": "F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/doc",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/assets/doc&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\doc" />
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671704411318</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update documents">
+      <created>1671713700937</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671713700937</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -247,7 +256,8 @@
     <MESSAGE value="Add run in a separate window to facial recognition" />
     <MESSAGE value="Add a new button and fix some errors" />
     <MESSAGE value="fix errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix errors" />
+    <MESSAGE value="update documents" />
+    <option name="LAST_COMMIT_MESSAGE" value="update documents" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
