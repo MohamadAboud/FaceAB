@@ -63,6 +63,9 @@ class WelcomScreen(UserControl):
         else:
             self.button = self.startAndAddButton
 
+    def __call__(self, *args, **kwargs):
+        # Do nothing ...
+        ...
 
     def build(self):
         return Container(
