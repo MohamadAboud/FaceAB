@@ -131,7 +131,7 @@ class ImageScreen(UserControl):
 
         self.popUp = Container(
             padding=padding.symmetric(horizontal=20,vertical=20),
-            bgcolor="black",
+            bgcolor= AppColor.negativeBackgroundColor,
             opacity= 0.95,
             top=AppSize.height * 0.15,
             left=AppSize.width  * 0.05,
