@@ -16,4 +16,6 @@ class AppColor:
     secondaryColor = "#f3eafd"
 
     backgroundColor = "white"
+    negativeBackgroundColor = "black"
+
     themeMode = ThemeMode.LIGHT
