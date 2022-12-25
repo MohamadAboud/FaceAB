@@ -14,4 +14,5 @@ class Check:
             makedirs("data/users")
             makedirs("data/model")
 
-        print(f"Test : {Check.isFirstTime}")
+        from utils.dev import Developer
+        Developer.log(f"Is first time : {Check.isFirstTime}",mode='info')

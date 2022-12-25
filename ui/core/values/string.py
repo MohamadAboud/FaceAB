@@ -4,6 +4,9 @@ from ui.core.languages.languages import Language
 class Path:
     saveImg = "./data/users" # [ users folder -> user-00000 ]
 
+class SplashScreenString:
+    img = "/images/loading_files.gif"
+
 class WelcomeScreenString:
     img = "/images/welcom_image_light.gif"
 
@@ -124,11 +127,11 @@ class TrainingScreenString:
 class AppString:
     @classmethod
     def alignment(cls):
-        print(Language.getAlignment())
         return Language.getAlignment()
 
 
     name = "FACAB"
+    splachscreen = SplashScreenString()
     welcomescreen = WelcomeScreenString()
     imagescreen = ImageScreenString()
     trainingscreen = TrainingScreenString()
