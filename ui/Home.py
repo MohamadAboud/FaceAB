@@ -70,8 +70,8 @@ class Home:
         self.page.window_center()
 
         # push Welcome Screen....
-        self.page.controls = [WelcomScreen.init()]
-        self.page.update()
+        self.stack.controls = [WelcomScreen.init()]
+        self.stack.update()
 
 
 

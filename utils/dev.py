@@ -23,7 +23,7 @@ class Developer:
         """
         if Developer.isTesting:
             if mode == "info":
-                print(f"{Style.BOLD}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
+                print(f"{Style.UNDERLINE}{Style.BOLD}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
             elif mode == "error":
                 print(f"{Style.ERROR}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
             elif mode == "warning":
