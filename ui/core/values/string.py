@@ -1,15 +1,38 @@
+from ui.core.languages.languages import Language
+
+ar = {}
+en = {}
 
 class Path:
     saveImg = "./data/users" # [ users folder -> user-00000 ]
 
 class WelcomeScreenString:
     img = "/images/welcom_image_light.gif"
-    welcomText = "Welcome"
-    subText = ['Face','Recognition','application']
-    introText = ['is a facial recognition app which','detects person from your training model']
-    button1 = "Get Started"
-    button2 = "Start"
-    button3 = "Add Face"
+
+    @property
+    def welcomText(self):
+        return Language.getText(key="welcome_text")
+
+    @property
+    def subText(self):
+        return Language.getText("face_recognition_application_text")
+
+    @property
+    def introText(self):
+        return Language.getText("intro_text")
+
+    @property
+    def button1(self):
+        return Language.getText("get_started_text")
+
+    @property
+    def button2(self):
+        return Language.getText("start_text")
+
+    @property
+    def button3(self):
+        return Language.getText("add_face_text")
+
 
 class ImageScreenString:
 
@@ -51,6 +74,11 @@ class TrainingScreenString:
     text2 = "Smile & blink your eyes,then move your\nhead slowly to complete"
 
 class AppString:
+    @classmethod
+    def alignment(cls):
+        print(Language.getAlignment())
+        return Language.getAlignment()
+
 
     name = "FACAB"
     welcomescreen = WelcomeScreenString()

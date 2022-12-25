@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update documents">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change color">
+      <change afterPath="$PROJECT_DIR$/assets/images/cam_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/error_light.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/core/languages/ar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/core/languages/en.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/core/languages/languages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/widgets/dynamic_taps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/camera_source.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/core.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_text_field.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/file_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/widgets/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +56,8 @@
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\utils" />
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\images" />
+      <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\utils" />
     </key>
   </component>
   <component name="RunManager">
@@ -182,7 +190,56 @@
       <option name="project" value="LOCAL" />
       <updated>1671713700937</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update colors">
+      <created>1671791420876</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791420876</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix some errors">
+      <created>1671791440041</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791440041</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add call method">
+      <created>1671791467565</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791467565</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add a new button &quot;Submit &amp; Add another face&quot;">
+      <created>1671791511624</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791511624</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update">
+      <created>1671791532771</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791532771</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add new color">
+      <created>1671791903762</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791903762</updated>
+    </task>
+    <task id="LOCAL-00021" summary="change color">
+      <created>1671791919989</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791919989</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -257,7 +314,14 @@
     <MESSAGE value="Add a new button and fix some errors" />
     <MESSAGE value="fix errors" />
     <MESSAGE value="update documents" />
-    <option name="LAST_COMMIT_MESSAGE" value="update documents" />
+    <MESSAGE value="update colors" />
+    <MESSAGE value="fix some errors" />
+    <MESSAGE value="add call method" />
+    <MESSAGE value="add a new button &quot;Submit &amp; Add another face&quot;" />
+    <MESSAGE value="update" />
+    <MESSAGE value="add new color" />
+    <MESSAGE value="change color" />
+    <option name="LAST_COMMIT_MESSAGE" value="change color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
