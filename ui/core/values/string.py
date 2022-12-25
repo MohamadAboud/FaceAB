@@ -1,7 +1,5 @@
 from ui.core.languages.languages import Language
 
-ar = {}
-en = {}
 
 class Path:
     saveImg = "./data/users" # [ users folder -> user-00000 ]
@@ -37,27 +35,65 @@ class WelcomeScreenString:
 class ImageScreenString:
 
     class PopUp:
-        title = "User Name"
-        subText = "Can you tell me your name\nso we can set up your profile"
-        buttonText1 = "Submit & Add another face"
-        buttonText2 = "Submit & Train"
+        @property
+        def title(self):
+            return Language.getText(key="user_name_text")
+        @property
+        def subText(self):
+            return Language.getText(key="sub_text")
+        @property
+        def buttonText1(self):
+            return Language.getText(key="button1_text")
+        
+        @property
+        def buttonText2(self):
+            return Language.getText(key="button2_text")        
+        
+        @property
+        def textFieldTitle(self):
+            return Language.getText(key="text_field_title")
+        
+        @property
+        def textFieldHintText(self):
+            return Language.getText(key="text_field_hint_text")
+        
+        @property
+        def textFieldError(self):
+            return Language.getText(key="text_field_error")
 
-        textFieldTitle = "Name"
-        textFieldHintText = "Enter your name"
-        textFieldError = "Name is required"
-
-        fileNotExistsError = "This name already exists"
-        osError = "This name is not valid"
-        error = "You have an error"
-
-        closeTooltip = "Your facial data will be deleted,\n are you sure?"
+        @property
+        def fileNotExistsError(self):
+            return Language.getText(key="file_not_exists")
+ 
+        
+        @property
+        def osError(self):
+            return Language.getText(key="os_error")
+        
+        @property
+        def error(self):
+            return Language.getText(key="error")
+        
+        @property
+        def closeTooltip(self):
+            return Language.getText(key="close_tooltip") 
 
     img = "images/loading_light.gif"
-    text1 = "Verification Process"
-    text2 = "Smile & blink your eyes,then move your\nhead slowly to complete the process"
-
-    progressText1 = "Loading..."
-    progressText2 = "recognised"
+    
+    @property
+    def text1(self):
+        return Language.getText(key="image_text1")
+    
+    @property
+    def text2(self):
+        return Language.getText(key="image_text2")
+    @property
+    def progressText1(self):
+        return Language.getText(key="image_progress1_text")
+    
+    @property
+    def progressText2(self):
+        return Language.getText(key="image_progress2_text")
 
 
     popup = PopUp()
@@ -67,11 +103,23 @@ class TrainingScreenString:
     img = "images/traning_image.gif"
     doneImg = "images/done.gif"
 
-    progressText1 = "training"
-    subText = "We are now in the process of creating\n the model for you"
+    @property
+    def progressText1(self):
+        return Language.getText(key="training_progress_text") 
 
-    text1 = "Successful!"
-    text2 = "Smile & blink your eyes,then move your\nhead slowly to complete"
+    
+    @property
+    def subText(self):
+        return Language.getText(key="training_sub_text")
+
+    @property
+    def text1(self):
+        return Language.getText(key="training_text1")
+
+    
+    @property
+    def text2(self):
+        return Language.getText(key="training_text2")
 
 class AppString:
     @classmethod
@@ -86,4 +134,3 @@ class AppString:
     trainingscreen = TrainingScreenString()
 
     path = Path()
-

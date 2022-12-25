@@ -9,7 +9,7 @@ class Language:
 
     allLanguage = LCode
 
-    currentLanguageCode = allLanguage.englishCode.value
+    currentLanguageCode = allLanguage.arabicCode.value
 
     @classmethod
     def changeLanguage(cls):

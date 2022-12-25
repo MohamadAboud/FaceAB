@@ -101,7 +101,7 @@ class ImageScreen(UserControl):
                                 text_align=TextAlign.CENTER
                             ),
 
-                            Container(height=15),  # Padding
+                            Container(height=5),  # Padding
 
                             Signature(77, 111, 104, 97, 109, 97, 100, 32, 65, 98, 111, 117, 100)
                         ]

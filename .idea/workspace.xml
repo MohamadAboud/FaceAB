@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="change color">
-      <change afterPath="$PROJECT_DIR$/assets/images/cam_loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/error_light.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/core/languages/ar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/core/languages/en.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/core/languages/languages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/widgets/dynamic_taps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/camera_source.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/widgets/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="add multi language" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +224,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671791919989</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add dynamic taps">
+      <created>1671953015082</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1671953015082</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add restart methods">
+      <created>1671953040665</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671953040665</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add multi language">
+      <created>1671953083218</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671953083218</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -321,7 +327,10 @@
     <MESSAGE value="update" />
     <MESSAGE value="add new color" />
     <MESSAGE value="change color" />
-    <option name="LAST_COMMIT_MESSAGE" value="change color" />
+    <MESSAGE value="add dynamic taps" />
+    <MESSAGE value="add restart methods" />
+    <MESSAGE value="add multi language" />
+    <option name="LAST_COMMIT_MESSAGE" value="add multi language" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
