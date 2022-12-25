@@ -76,11 +76,13 @@ class WelcomScreen(UserControl):
                 horizontal_alignment =CrossAxisAlignment.START,
                 controls=[
                     # Image --------------------
-                    Image(
-                        src=AppString.welcomescreen.img,
+                    DynamicTaps(
                         height=250,
                         width=350,
-                        fit=ImageFit.CONTAIN
+                        content=Image(
+                            src=AppString.welcomescreen.img,
+                            fit=ImageFit.CONTAIN
+                        )
                     ),
 
                     Container(height=10), # Padding
@@ -90,6 +92,7 @@ class WelcomScreen(UserControl):
                     Container(
                         padding=padding.symmetric(horizontal=25),
                         content=Column(
+                            horizontal_alignment=AppString.alignment(),
                             controls=[
                                 # Welcome[Text] --------------------
                                 Text(
@@ -106,9 +109,9 @@ class WelcomScreen(UserControl):
                                         Text(f"{AppString.welcomescreen.subText[1]}".upper(), size=25, color=AppColor.primaryColor,
                                              weight=FontWeight.BOLD),
 
-                                    ]),
+                                    ],alignment=AppString.alignment()),
                                     Text(f"{AppString.welcomescreen.subText[2]}".upper(), size=25, weight=FontWeight.BOLD)
-                                ],spacing=0),
+                                ],spacing=0,horizontal_alignment=AppString.alignment()),
 
                                 # Introduction[Text] --------------------
                                 Column([
@@ -117,10 +120,10 @@ class WelcomScreen(UserControl):
                                         Text(f"{AppString.name[3:]}", color=AppColor.primaryColor),
                                         Text(f" {AppString.welcomescreen.introText[0]}", opacity=0.6),
 
-                                    ],spacing=0),
+                                    ],spacing=0,alignment=AppString.alignment()),
                                     Text(f"{AppString.welcomescreen.introText[1]}", opacity=0.6,
                                          text_align=TextAlign.START)
-                                ],spacing=0, opacity=0.6),
+                                ],spacing=0, opacity=0.6,horizontal_alignment=AppString.alignment()),
 
                                 Container(height=10),  # Padding
 
