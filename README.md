@@ -8,7 +8,8 @@
     <a href="https://github.com/MohamadAboud"> <img src="https://img.shields.io/badge/license-Mohamad%20Aboud-purple" alt="Mohamad Aboud"> </a>
     <a href="#"> <img src="https://img.shields.io/badge/Version-v%200.0.1-blue" alt="Version"> </a>
     <a href="#"> <img src="https://img.shields.io/badge/platform-windows-lightgrey" alt="Supported OS"> </a>
-    <a href="https://github.com/MohamadAboud/FaceAB"> <img src="https://img.shields.io/badge/Github-repo-lightgray" alt="Repo"> </a>    
+    <a href="#"> <img src="https://img.shields.io/badge/Language-EN%20%7C%20AR-blue" alt="lang"> </a>  
+    <a href="https://github.com/MohamadAboud/FaceAB"> <img src="https://img.shields.io/badge/Github-repo-lightgray" alt="Repo"> </a>     
     <a href="https://www.python.org/downloads/release/python-391/"> <img src="https://img.shields.io/badge/python-v3.4%20%7C%20v3.5%20%7C%20v3.6%20%7C%20v3.7%20%7C%20v3.8%20%7C%20v3.9-yellow" alt="Python Supported Versions"> </a>
 </p>
 

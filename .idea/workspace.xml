@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="add colors to log method">
-      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update colors">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671985804662</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update colors">
+      <created>1671986233178</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1671986233178</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -342,7 +350,6 @@
     <MESSAGE value="Add a new button and fix some errors" />
     <MESSAGE value="fix errors" />
     <MESSAGE value="update documents" />
-    <MESSAGE value="update colors" />
     <MESSAGE value="fix some errors" />
     <MESSAGE value="add call method" />
     <MESSAGE value="add a new button &quot;Submit &amp; Add another face&quot;" />
@@ -354,7 +361,8 @@
     <MESSAGE value="add multi language" />
     <MESSAGE value="add splash screen" />
     <MESSAGE value="add colors to log method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add colors to log method" />
+    <MESSAGE value="update colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="update colors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
