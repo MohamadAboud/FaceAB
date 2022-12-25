@@ -39,3 +39,11 @@ class Navigator:
         Home.instance.stack.controls = [page]
         cls.update()
         Developer.log("Pop All And Push", mode='info')
+
+    @classmethod
+    def restart(cls):
+        from ui.routes.welcom_screen import WelcomScreen
+
+        Home.instance.stack.controls = [WelcomScreen.init()]
+        cls.update()
+        Developer.log("Restart...", mode='info')
