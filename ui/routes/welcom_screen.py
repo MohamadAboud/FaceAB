@@ -18,17 +18,13 @@ class WelcomScreen(UserControl):
         # Buttons --------------------
         self.getStartedButton = CustomButton(
             text=AppString.welcomescreen.button1,
-            width=AppSize.width * 0.9,
             height=40,
-            padding=padding.only(top=15, bottom=25),
             on_click= self.go_to_image_taking_screen
         )
 
         self.startAndAddButton = Column([
-            CustomButtonDropDown(
+            CustomDropDownButton(
                 text=AppString.welcomescreen.button2,
-                width=325,
-                height=47,
                 on_click=self.runApp,
                 items=[
                     CustomItem(
@@ -44,16 +40,13 @@ class WelcomScreen(UserControl):
                         on_click=self.__go_to_age_and_gender_window
                     ),
                 ],
-                hTextColor="white",
             ),
 
             CustomButton(
                 text=AppString.welcomescreen.button3,
-                width=320,
                 height=40,
-                dColor=AppColor.secondaryColor,
-                dTextColor=AppColor.primaryColor,
-                padding=padding.only(top=5),
+                default_bgcolor=AppColor.secondaryColor,
+                default_textcolor=AppColor.primaryColor,
                 on_click=self.go_to_image_taking_screen
             )
         ])
@@ -154,15 +147,15 @@ class WelcomScreen(UserControl):
         Navigator.push(ImageScreen.init())
         ImageScreen.instance()
 
-    def __go_to_card_window(self):
+    def __go_to_card_window(self,_):
         self.runApp('')
 
-    def __go_to_body_window(self):
+    def __go_to_body_window(self,_):
         print("go_to_body_window")
-    def __go_to_face_window(self):
+    def __go_to_face_window(self,_):
         from scripts.scripts import FacialThread
         FacialThread().run_in_separate_window()
 
-    def __go_to_age_and_gender_window(self):
+    def __go_to_age_and_gender_window(self,_):
         from scripts.scripts import GenderAndAgeThread
         GenderAndAgeThread().run_in_separate_window()
