@@ -25,7 +25,7 @@ class WelcomScreen(UserControl):
         self.startAndAddButton = Column([
             CustomDropDownButton(
                 text=AppString.welcomescreen.button2,
-                on_click=self.runApp,
+                on_click=self.__go_to_card_window,
                 items=[
                     CustomItem(
                         text="Card",
@@ -148,14 +148,26 @@ class WelcomScreen(UserControl):
         ImageScreen.instance()
 
     def __go_to_card_window(self,_):
+        from ui.navigator import Navigator
+
+        Navigator.waiting(True) # push waiting_screen and wait for ......
         self.runApp('')
+        Navigator.waiting(False) # pop waiting_screen ......
 
     def __go_to_body_window(self,_):
         print("go_to_body_window")
     def __go_to_face_window(self,_):
         from scripts.scripts import FacialThread
+        from ui.navigator import Navigator
+
+        Navigator.waiting(True) # push waiting_screen and wait for ......
         FacialThread().run_in_separate_window()
+        Navigator.waiting(False) # pop waiting_screen ......
 
     def __go_to_age_and_gender_window(self,_):
         from scripts.scripts import GenderAndAgeThread
+        from ui.navigator import Navigator
+
+        Navigator.waiting(True) # push waiting_screen and wait for ......
         GenderAndAgeThread().run_in_separate_window()
+        Navigator.waiting(False) # pop waiting_screen ......

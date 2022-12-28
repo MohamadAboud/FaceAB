@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update doc">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update custom_button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/widgets/custom_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/widgets/custom_button.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +285,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671986701174</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update custom_button">
+      <created>1672155922185</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1672155922185</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update custom_button">
+      <created>1672155927108</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1672155927108</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -345,7 +360,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change padding to container" />
     <MESSAGE value="change screen to class and add Navigator 1.0" />
     <MESSAGE value="change all screen to class and update Navigator 1.0" />
     <MESSAGE value="add training_model script and predicting_gender_and_age script" />
@@ -370,7 +384,8 @@
     <MESSAGE value="add colors to log method" />
     <MESSAGE value="update colors" />
     <MESSAGE value="update doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update doc" />
+    <MESSAGE value="update custom_button" />
+    <option name="LAST_COMMIT_MESSAGE" value="update custom_button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

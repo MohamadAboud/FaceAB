@@ -47,3 +47,12 @@ class Navigator:
         Home.instance.stack.controls = [WelcomScreen.init()]
         cls.update()
         Developer.log("Restart...", mode='info')
+    
+    @classmethod
+    def waiting(cls,isWaiting):
+        from ui.routes.routes import WaitingScreen,WelcomScreen
+        
+        if isWaiting:
+            cls.popAllAndPush(WaitingScreen())
+        else:
+            cls.popAllAndPush(WelcomScreen.init())
