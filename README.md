@@ -105,7 +105,7 @@ To install and use the FaceAB software, you will need to have the following libr
 
 * `scikit-learn`: This library is used to train the **knn model** used for fast facial recognition. You can install it using the following command:
 ``` 
-> pip install scikit-learn==1.2.0
+> pip install scikit-learn
 ```
 
 
