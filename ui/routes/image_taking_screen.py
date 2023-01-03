@@ -76,7 +76,7 @@ class ImageScreen(UserControl):
                         controls=[
                             # Text --------------------
                             Container(
-                                on_click=self.openTest,
+                                # on_click=self.openTest,
                                 content=self.progressText
                             ),
 
@@ -121,8 +121,8 @@ class ImageScreen(UserControl):
             self.textField.controls[1].update()
 
         self.textField = CustomTextField(
-                        title=AppString.imagescreen.PopUp.textFieldTitle,
-                        hint_text=AppString.imagescreen.PopUp.textFieldHintText,
+                        title=AppString.imagescreen.popup.textFieldTitle,
+                        hint_text=AppString.imagescreen.popup.textFieldHintText,
                         icons=icons.PERSON,
                         # error_text="Test....",
                         on_submit=self.__submit,
@@ -148,7 +148,7 @@ class ImageScreen(UserControl):
                     # Text --------------------
                     Row([
                         Text(
-                            AppString.imagescreen.PopUp.title,
+                            AppString.imagescreen.popup.title,
                             weight=FontWeight.BOLD,
                             scale=1.8,
                             color='white'
@@ -159,7 +159,7 @@ class ImageScreen(UserControl):
 
                     # Text --------------------
                     Text(
-                        AppString.imagescreen.PopUp.subText,
+                        AppString.imagescreen.popup.subText,
                         color='white',
                         size=17,
                     ),
@@ -171,21 +171,21 @@ class ImageScreen(UserControl):
                     Container(height=10),  # Padding
 
                     CustomButton(
-                        text=AppString.imagescreen.PopUp.buttonText1,
+                        text=AppString.imagescreen.popup.buttonText1,
                         width=AppSize.width * 0.8,
-                        dColor="white",
-                        hColor="#deddd9",
-                        dTextColor="#808080",
-                        hTextColor="black",
+                        default_bgcolor="white",
+                        hover_bgcolor="#deddd9",
+                        default_textcolor="#808080",
+                        hover_textcolor="black",
                         on_click=self.__check_and_go_to_the_welcome_screen
                     ),
 
                     CustomButton(
-                        text= AppString.imagescreen.PopUp.buttonText2,
+                        text= AppString.imagescreen.popup.buttonText2,
                         width= AppSize.width * 0.8,
-                        dColor="black",
-                        dTextColor="white",
-                        hColor="#deddd9",
+                        default_bgcolor="black",
+                        default_textcolor="white",
+                        hover_bgcolor="#deddd9",
                         on_click=self.__check_and_go_to_the_training_screen
                     ),
                 ]
@@ -330,10 +330,10 @@ class ImageScreen(UserControl):
 
     ##############################| Test |##############################
 
-    def Test(self,e):
-        ImageScreen.instance()
-    def openTest(self,e):
-        self.popUp.offset = transform.Offset(0, 0)
-        self.closeButton.offset = transform.Offset(0, 0)
-        self.popUp.update()
-        self.closeButton.update()
+    # def Test(self,e):
+    #     ImageScreen.instance()
+    # def openTest(self,e):
+    #     self.popUp.offset = transform.Offset(0, 0)
+    #     self.closeButton.offset = transform.Offset(0, 0)
+    #     self.popUp.update()
+    #     self.closeButton.update()

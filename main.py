@@ -3,7 +3,6 @@ from flet import app as runApp
 
 
 
-
 if __name__ == '__main__':
     # -----------------------------
     runApp(

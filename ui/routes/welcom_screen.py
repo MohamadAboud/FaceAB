@@ -18,7 +18,6 @@ class WelcomScreen(UserControl):
         # Buttons --------------------
         self.getStartedButton = CustomButton(
             text=AppString.welcomescreen.button1,
-            height=40,
             on_click= self.go_to_image_taking_screen
         )
 
@@ -118,10 +117,13 @@ class WelcomScreen(UserControl):
                                          text_align=TextAlign.START)
                                 ],spacing=0, opacity=0.6,horizontal_alignment=AppString.alignment()),
 
-                                Container(height=10),  # Padding
+                                Container(height=20) if Check.isFirstTime else Container(height=10),  # Padding
 
                                 # Buttons --------------------
                                 self.button,
+
+
+                                Container(height=25) if Check.isFirstTime else Container(height=0),
 
                                 Signature(77, 111, 104, 97, 109, 97, 100, 32, 65, 98, 111, 117, 100)
                             ]

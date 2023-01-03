@@ -2,7 +2,7 @@ opencv-python==4.6.0.66
 cmake==3.25.0
 dlib==19.24.0
 face-recognition==1.3.0
-scikit-learn
+scikit-learn==1.2.0
 mediapipe==0.9.0.1
 cvzone==1.5.6
 flet==0.2.4

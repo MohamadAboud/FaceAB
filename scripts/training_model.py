@@ -64,7 +64,7 @@ class TrainingModel:
                     Developer.log("Image '{}' not suitable for training: {}".format(imagePath,
                                                                                     "Didn't find a face" if len(
                                                                                         face_bounding_boxes) < 1 else "Found more than one face"),
-                                  mode='warning')
+                                  mode='error')
                 else:
                     # Add face encoding for current image to the training set
                     trainingArray = face_recognition.face_encodings(image, known_face_locations=face_bounding_boxes)[0]

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="add waiting_screen">
-      <change beforePath="$PROJECT_DIR$/.idea/3.CardID (GUI).iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/3.CardID (GUI).iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update req">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/training_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/training_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/image_taking_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/welcom_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/welcom_screen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Python/1.Projects/3.My Teams Folder/0.Python/4.Aboud Structure&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "last_opened_file_path": "F:/Python/1.Projects/2.The University projects/3.CardID (GUI)/1.Python Scripts",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Python\1.Projects\2.The University projects\3.CardID (GUI)\assets\doc" />
@@ -305,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672232562137</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update req">
+      <created>1672739921019</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1672739921019</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -366,7 +377,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change all screen to class and update Navigator 1.0" />
     <MESSAGE value="add training_model script and predicting_gender_and_age script" />
     <MESSAGE value="update take_images script" />
     <MESSAGE value="An initial version of the project" />
@@ -391,7 +401,8 @@
     <MESSAGE value="update doc" />
     <MESSAGE value="update custom_button" />
     <MESSAGE value="add waiting_screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add waiting_screen" />
+    <MESSAGE value="update req" />
+    <option name="LAST_COMMIT_MESSAGE" value="update req" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
