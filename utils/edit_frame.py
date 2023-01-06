@@ -7,18 +7,18 @@ def drawBox(frame, start_point: tuple, end_point: tuple, color=(255, 255, 255)):
         lenght = 30
 
         if top and left:
-            cv2.line(frame, (x, y), (x + lenght, y), (255, 255, 255), 4)
-            cv2.line(frame, (x, y), (x, y + lenght), (255, 255, 255), 4)
+            cv2.line(frame, (x, y), (x + lenght, y), color, 4)
+            cv2.line(frame, (x, y), (x, y + lenght), color, 4)
         elif top and right:
-            cv2.line(frame, (x, y), (x - lenght, y), (255, 255, 255), 4)
-            cv2.line(frame, (x, y), (x, y + lenght), (255, 255, 255), 4)
+            cv2.line(frame, (x, y), (x - lenght, y), color, 4)
+            cv2.line(frame, (x, y), (x, y + lenght), color, 4)
 
         elif bottom and left:
-            cv2.line(frame, (x, y), (x + lenght, y), (255, 255, 255), 4)
-            cv2.line(frame, (x, y), (x, y - lenght), (255, 255, 255), 4)
+            cv2.line(frame, (x, y), (x + lenght, y), color, 4)
+            cv2.line(frame, (x, y), (x, y - lenght), color, 4)
         elif bottom and right:
-            cv2.line(frame, (x, y), (x - lenght, y), (255, 255, 255), 4)
-            cv2.line(frame, (x, y), (x, y - lenght), (255, 255, 255), 4)
+            cv2.line(frame, (x, y), (x - lenght, y), color, 4)
+            cv2.line(frame, (x, y), (x, y - lenght), color, 4)
 
         return frame
 
@@ -67,4 +67,4 @@ def cropFace(frame):
         cropped_face = frameCopy[top: (top + h), left: (left + w)].copy()
         cropped_face = cv2.cvtColor(cropped_face, cv2.COLOR_BGR2RGB)
 
-        return (frame, cropped_face)
+        return frame, cropped_face

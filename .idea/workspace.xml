@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="update recapture">
+    <list default="true" id="25d86987-d568-4142-a443-015dfbb87ec7" name="Changes" comment="delete cvzone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/pose_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pose_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/training_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/training_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/Home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/languages/ar.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/languages/ar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/languages/en.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/languages/en.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/core/values/string.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/core/values/string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/navigator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/navigator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/training_model_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/training_model_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/routes/waiting_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/routes/waiting_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/camera_source.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/camera_source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/check_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/check_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/edit_frame.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/edit_frame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_manipulation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IdEvyX19Dl3fG3005CEF0aQ8h8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -353,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672987238551</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="delete cvzone">
+      <created>1672991143830</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1672991143830</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -414,7 +435,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update take_images script" />
     <MESSAGE value="An initial version of the project" />
     <MESSAGE value="Add threading to BodyDetector ,GenderAndAge and Facial class" />
     <MESSAGE value="Update info card to use multi-threading" />
@@ -439,6 +459,7 @@
     <MESSAGE value="update req" />
     <MESSAGE value="fix some errors" />
     <MESSAGE value="update recapture" />
-    <option name="LAST_COMMIT_MESSAGE" value="update recapture" />
+    <MESSAGE value="delete cvzone" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete cvzone" />
   </component>
 </project>

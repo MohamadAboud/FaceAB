@@ -1,5 +1,3 @@
-
-
 class Style:
     GREEN = '\033[92m'
     WARNING = '\033[93m'
@@ -8,11 +6,12 @@ class Style:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
 class Developer:
     isTesting = True
 
     @classmethod
-    def log(cls,*args, sep=' ', end='\n', file=None,mode=None):
+    def log(cls, *args, sep=' ', end='\n', file=None, mode=None):
         """
         :param args:
         :param sep:
@@ -23,12 +22,12 @@ class Developer:
         """
         if Developer.isTesting:
             if mode == "info":
-                print(f"{Style.UNDERLINE}{Style.BOLD}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
+                print(f"{Style.UNDERLINE}{Style.BOLD}", *args, f"{Style.ENDC}", sep=sep, end=end, file=file)
             elif mode == "error":
-                print(f"{Style.ERROR}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
+                print(f"{Style.ERROR}", *args, f"{Style.ENDC}", sep=sep, end=end, file=file)
             elif mode == "warning":
-                print(f"{Style.WARNING}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
+                print(f"{Style.WARNING}", *args, f"{Style.ENDC}", sep=sep, end=end, file=file)
             elif mode == "test":
-                print(f"{Style.UNDERLINE}",*args,f"{Style.ENDC}", sep=' ', end='\n', file=None)
+                print(f"{Style.UNDERLINE}", *args, f"{Style.ENDC}", sep=sep, end=end, file=file)
             else:
                 print(*args, sep=' ', end='\n', file=None)

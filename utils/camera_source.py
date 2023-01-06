@@ -1,11 +1,8 @@
-
-
-
 class CameraSource:
     camNumber = 0
 
     @classmethod
-    def changeCamera(cls,src):
+    def changeCamera(cls, src):
         if src >= 0:
             cls.camNumber = src
 

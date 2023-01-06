@@ -2,9 +2,7 @@ from flet import *
 from ui.core.core import *
 
 
-
 class TrainingScreen(UserControl):
-
     instance = None
 
     @classmethod
@@ -26,7 +24,7 @@ class TrainingScreen(UserControl):
             TrainingModel.train()
         except Exception as err:
             from utils.dev import Developer
-            Developer.log(f"error : {err}")
+            Developer.log(f"error : {err}",mode="error")
             # from ui.Home import Home
             # from ui.routes.welcom_screen import WelcomScreen
             # from ui.navigator import Navigator
@@ -34,7 +32,6 @@ class TrainingScreen(UserControl):
             #     text="Oops, there were some errors while trying to train the model. What would you like me to do?",
             #     on_click=lambda: Navigator.popAllAndPush(WelcomScreen.instance)
             # )
-
 
     @property
     def selectedIndex(self):
@@ -65,7 +62,7 @@ class TrainingScreen(UserControl):
             alignment=MainAxisAlignment.CENTER,
             horizontal_alignment=CrossAxisAlignment.CENTER,
             height=AppSize.height,
-            width= AppSize.width,
+            width=AppSize.width,
             controls=[
                 # Container(
                 #     bgcolor=AppColor.primaryColor ,
@@ -85,7 +82,7 @@ class TrainingScreen(UserControl):
                     )
                 ),
 
-                Container(height=35), # Padding
+                Container(height=35),  # Padding
 
                 # Text ............
                 Text(f"{AppString.trainingscreen.text1}".upper(), weight=FontWeight.BOLD, size=16),
@@ -102,18 +99,18 @@ class TrainingScreen(UserControl):
 
     def _loading(self):
 
-        self.progressText = Text(f"{AppString.trainingscreen.progressText1}...".upper(),weight=FontWeight.BOLD,size=16)
+        self.progressText = Text(f"{AppString.trainingscreen.progressText1}...".upper(), weight=FontWeight.BOLD,
+                                 size=16)
 
         self.progressBar = ProgressBar(
-                    #value= 0.5 , # ( 0 - 1 )
-                    width = AppSize.width * .8,
-                    bgcolor = AppColor.secondaryColor,
-                    color= AppColor.primaryColor,
-                )
-
+            # value= 0.5 , # ( 0 - 1 )
+            width=AppSize.width * .8,
+            bgcolor=AppColor.secondaryColor,
+            color=AppColor.primaryColor,
+        )
 
         return Column(
-            horizontal_alignment = CrossAxisAlignment.CENTER,
+            horizontal_alignment=CrossAxisAlignment.CENTER,
             height=AppSize.height,
             width=AppSize.width,
             controls=[
@@ -124,7 +121,7 @@ class TrainingScreen(UserControl):
                     fit=ImageFit.COVER,
                 ),
 
-                Container(height=20), # Padding
+                Container(height=20),  # Padding
 
                 # Text............
                 Container(
@@ -132,21 +129,21 @@ class TrainingScreen(UserControl):
                     content=self.progressText
                 ),
 
-                Container(height=5), # Padding
+                Container(height=5),  # Padding
 
                 # ProgressBar .........
                 self.progressBar,
 
-                Container(height=5), # Padding
+                Container(height=5),  # Padding
 
                 # Text............
                 Text(
                     AppString.trainingscreen.subText,
                     text_align=TextAlign.CENTER,
-                    opacity= 0.5, # ( 0 - 1 )
+                    opacity=0.5,  # ( 0 - 1 )
                 ),
 
-                Container(height=20), # Padding
+                Container(height=20),  # Padding
 
                 self._dotsIndicator,
             ]
@@ -159,7 +156,7 @@ class TrainingScreen(UserControl):
             reverse_duration=100,
             switch_in_curve=AnimationCurve.BOUNCE_OUT,
             switch_out_curve=AnimationCurve.BOUNCE_IN,
-            opacity= 0.7,
+            opacity=0.7,
             content=Row(
                 alignment=MainAxisAlignment.CENTER,
                 controls=[self._dot(idx) for idx in range(self.__maxDots)]
@@ -167,7 +164,7 @@ class TrainingScreen(UserControl):
         )
         return self._dotsIndicator
 
-    def _dot(self,index):
+    def _dot(self, index):
         return Container(
             height=8,
             width=8,
@@ -190,7 +187,6 @@ class TrainingScreen(UserControl):
         time.sleep(10.5)
         Navigator.popAllAndPush(WelcomScreen.init())
 
-
     # def Test1(self,e):
     #     TrainingScreen.instance()
     #
@@ -198,22 +194,22 @@ class TrainingScreen(UserControl):
     #     val = self.selectedIndex + 1
     #     self.updateDots(selected=val)
 
-    def updateDots(self,selected):
-        self.selectedIndex = selected
+    def updateDots(self, selectedIndex):
+        self.selectedIndex = selectedIndex
         self._dotsIndicator.content = Row(
-                alignment=MainAxisAlignment.CENTER,
-                controls=[self._dot(idx) for idx in range(self.__maxDots)]
-            )
+            alignment=MainAxisAlignment.CENTER,
+            controls=[self._dot(idx) for idx in range(self.__maxDots)]
+        )
         self._dotsIndicator.update()
 
-    def increaseProgressBar(self,value):
+    def increaseProgressBar(self, value):
         val = self.progressBar.value
 
         if val == None: val = 0
 
-        val += value/100
+        val += value / 100
 
-        self.progressText.value = f"{round(val*100,2)}% {AppString.trainingscreen.progressText1}".upper()
+        self.progressText.value = f"{round(val * 100, 2)}% {AppString.trainingscreen.progressText1}".upper()
         self.progressBar.value = val
 
         # When the progressBar Completed

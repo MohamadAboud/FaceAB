@@ -5,12 +5,12 @@ from utils.dev import Developer
 class Navigator:
 
     @classmethod
-    def push(cls,page):
+    def push(cls, page):
         Home.instance.stack.controls.append(
             page
         )
         cls.update()
-        Developer.log(f"Push",mode='info')
+        Developer.log(f"Push", mode='info')
 
     @classmethod
     def pop(cls):
@@ -27,7 +27,7 @@ class Navigator:
         Home.instance.stack.update()
 
     @classmethod
-    def pushReplacement(cls,page):
+    def pushReplacement(cls, page):
         Home.instance.stack.controls.pop()
         Home.instance.stack.controls.append(page)
 
@@ -35,7 +35,7 @@ class Navigator:
         Developer.log("pushReplacement", mode='info')
 
     @classmethod
-    def popAllAndPush(cls,page):
+    def popAllAndPush(cls, page):
         Home.instance.stack.controls = [page]
         cls.update()
         Developer.log("Pop All And Push", mode='info')
@@ -47,11 +47,11 @@ class Navigator:
         Home.instance.stack.controls = [WelcomScreen.init()]
         cls.update()
         Developer.log("Restart...", mode='info')
-    
+
     @classmethod
-    def waiting(cls,isWaiting):
-        from ui.routes.routes import WaitingScreen,WelcomScreen
-        
+    def waiting(cls, isWaiting):
+        from ui.routes.routes import WaitingScreen, WelcomScreen
+
         if isWaiting:
             cls.popAllAndPush(WaitingScreen())
         else:

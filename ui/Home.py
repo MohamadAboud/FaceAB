@@ -1,19 +1,16 @@
-import time
-
 from flet import *
 from ui.routes.routes import *
 from ui.core.core import *
 
 
 class Home:
-
     instance = None
+
     @classmethod
-    def init(cls,page:Page):
+    def init(cls, page: Page):
         Home.instance = cls(page)
 
-
-    def __init__(self,page:Page):
+    def __init__(self, page: Page):
 
         # Variable
         self.page = page
@@ -73,14 +70,8 @@ class Home:
         self.stack.controls = [WelcomScreen.init()]
         self.stack.update()
 
-
-
-
-
-
-
-    def showBanner(self,text,on_click=None):
-        def close_banner(e):
+    def showBanner(self, text, on_click=None):
+        def close_banner(_):
             self.page.banner.open = False
             self.page.update()
 

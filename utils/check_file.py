@@ -1,5 +1,3 @@
-
-
 class Check:
     isFirstTime = True
 
@@ -15,4 +13,4 @@ class Check:
             makedirs("data/model")
 
         from utils.dev import Developer
-        Developer.log(f"Is first time : {Check.isFirstTime}",mode='info')
+        Developer.log(f"Is first time : {Check.isFirstTime}", mode='info')
