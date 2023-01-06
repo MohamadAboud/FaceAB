@@ -10,7 +10,7 @@
     <a href="#"> <img src="https://img.shields.io/badge/platform-windows-lightgrey" alt="Supported OS"> </a>
     <a href="#"> <img src="https://img.shields.io/badge/Language-EN%20%7C%20AR-blue" alt="lang"> </a>  
     <a href="https://github.com/MohamadAboud/FaceAB"> <img src="https://img.shields.io/badge/Github-repo-lightgray" alt="Repo"> </a>     
-    <a href="https://www.python.org/downloads/release/python-391/"> <img src="https://img.shields.io/badge/python-v3.4%20%7C%20v3.5%20%7C%20v3.6%20%7C%20v3.7%20%7C%20v3.8%20%7C%20v3.9-yellow" alt="Python Supported Versions"> </a>
+    <a href="https://www.python.org/downloads/release/python-391/"> <img src="https://img.shields.io/badge/python-v3.9.1-yellow" alt="Python Supported Versions"> </a>
 </p>
 
 
@@ -25,7 +25,6 @@ including :
 * face_recognition.
 * scikit-learn.
 * mediapipe.
-* cvzone.
 * flet.
 
 The FaceAB program offers a **user-friendly interface** that allows users to easily set up and configure the face recognition system to their specific needs. The program uses a deep learning-based approach to face recognition, which allows it to accurately identify individuals even in challenging lighting conditions and when faces are partially occluded.
@@ -57,10 +56,7 @@ The FaceAB software uses several libraries and technologies to perform real-time
 6. `mediapipe`: This library is used to process video streams in real-time, allowing the FaceAB software to recognize faces in live video feeds.
 
 
-7. `cvzone`: This is a Computer vision package that makes its easy to run Image processing and AI functions. At the core it uses OpenCV and Mediapipe libraries.
-
-
-8. `flet`: This library is a framework that allows building interactive multi-user web, desktop and mobile applications in `flutter language`.
+7. `flet`: This library is a framework that allows building interactive multi-user web, desktop and mobile applications in `flutter language`.
 
 In addition to these libraries, the FaceAB software also utilizes advanced machine learning algorithms, such as ***K-nearest neighbor (kNN)***, to accurately recognize faces . 
 
@@ -113,12 +109,6 @@ To install and use the FaceAB software, you will need to have the following libr
 ``` 
 > pip install mediapipe==0.9.0.1
 ```
-
-* `cvzone`: .... You can install it using the following command:
-``` 
-> pip install cvzone==1.5.6
-```
-
 
 
 * `flet`: This library is used to build the graphical interface. You can install it using the following command:
@@ -196,10 +186,6 @@ To learn more about the FaceAB software and its capabilities, please see the fol
 * `MediaPipe`:
   * MediaPipe documentation: https://google.github.io/mediapipe/
   * MediaPipe GitHub repository: https://github.com/google/mediapipe
-
-
-* `CVZone`:
-  * CVZone GitHub repository: https://github.com/cvzone/cvzone
 
     
 * `Flet`:
