@@ -28,6 +28,7 @@ ArMap = {
     "training_progress_text":"تدريب",
     "training_sub_text":"نحن الآن بصدد إنشاء \n النموذج من أجلك",
     "training_text1":"بنجاح",
-    "training_text2":"",
-    
+    "training_text2":"تهانينا على إكمال تدريب \n الذكاء الاصطناعي الخاص بك!",
+    # Waiting Screen --------------------------------
+    "waiting_text": "Click the 'Esc' key on your keyboard\n to close this window.",
 }

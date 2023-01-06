@@ -1,12 +1,12 @@
 from flet import *
-from ui.core.core import AppSize
+from ui.core.core import AppSize,AppString
 from ui.widgets.widgets import CustomButton
 
 
 class WaitingScreen(UserControl):
     def __init__(self):
         super().__init__()
-        
+
     def build(self):
         return Container(
             height=AppSize.height,
@@ -25,23 +25,23 @@ class WaitingScreen(UserControl):
                 # Dot ....
                 Row([
                     Image(
-                        src="/images/dot.gif",
+                        src=AppString.waitingscreen.dotImg,
                         height= AppSize.height * .08,
                         width=AppSize.width * .15,
                         fit=ImageFit.CONTAIN
                     )
                 ]),
-                
+
                 # waiting image ...
                 Image(
-                    src="/images/waiting-light.gif",
+                    src=AppString.waitingscreen.img,
                     fit=ImageFit.CONTAIN,
                     expand=True
                 )
             ],spacing=0)
         )
-    
-    
+
+
     def __body(self):
         return Container(
             expand=True,
@@ -50,12 +50,12 @@ class WaitingScreen(UserControl):
             content=Column([
                 # Text ...
                 Text(
-                        "Click 'Esc' to close the Window ", #\nor click button ",
+                        AppString.waitingscreen.text,
                         text_align=TextAlign.CENTER,
-                        weight=FontWeight.BOLD,    
+                        weight=FontWeight.BOLD,
                         size= 18
                     ),
-                
+
                 # close button
                 # CustomButton(
                 #     text="Close".upper(),
@@ -67,8 +67,8 @@ class WaitingScreen(UserControl):
                 # )
             ],alignment=MainAxisAlignment.SPACE_EVENLY)
         )
-    
-    
+
+
     ##########################################| Events |##########################################
     # def __on_click(self,_):
     #     import cv2

@@ -124,6 +124,15 @@ class TrainingScreenString:
     def text2(self):
         return Language.getText(key="training_text2")
 
+
+class WaitingScreenString:
+    dotImg = "/images/dot.gif"
+    img = "/images/waiting-light.gif"
+
+    @property
+    def text(self):
+        return Language.getText(key="waiting_text")
+
 class AppString:
     @classmethod
     def alignment(cls):
@@ -135,5 +144,6 @@ class AppString:
     welcomescreen = WelcomeScreenString()
     imagescreen = ImageScreenString()
     trainingscreen = TrainingScreenString()
+    waitingscreen = WaitingScreenString()
 
     path = Path()

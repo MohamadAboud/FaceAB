@@ -27,6 +27,7 @@ EngMap = {
     "training_progress_text":"training",
     "training_sub_text":"We are now in the process of creating\n the model for you",
     "training_text1":"Successful",
-    "training_text2":"Smile & blink your eyes,then move your\nhead slowly to complete",
-    
+    "training_text2":"Congratulations on completing\n your AI training!",
+    # Waiting Screen --------------------------------
+    "waiting_text": "Click the 'Esc' key on your keyboard\n to close this window.",
 }
