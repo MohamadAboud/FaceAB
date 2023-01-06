@@ -177,7 +177,7 @@ class ImageScreen(UserControl):
                         hover_bgcolor="#deddd9",
                         default_textcolor="#808080",
                         hover_textcolor="black",
-                        on_click=self.__check_and_go_to_the_welcome_screen
+                        on_click=self.__check_and_recapture
                     ),
 
                     CustomButton(
@@ -267,7 +267,7 @@ class ImageScreen(UserControl):
     def __submit(self,e):
         ...
 
-    def __check_and_go_to_the_welcome_screen(self, e):
+    def __check_and_recapture(self, e):
         def method():
             # close PopUp
             self.__closePopUp()
@@ -275,8 +275,8 @@ class ImageScreen(UserControl):
             from ui.routes.routes import WelcomScreen
             from ui.navigator import Navigator
             # push WelcomScreen
-            Navigator.popAllAndPush(WelcomScreen.init())
-            WelcomScreen.instance()
+            Navigator.popAllAndPush(ImageScreen.init())
+            ImageScreen.instance()
 
         self.__chackUserName(method=method)
 
